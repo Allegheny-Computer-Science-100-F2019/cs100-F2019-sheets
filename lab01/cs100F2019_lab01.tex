@@ -152,10 +152,10 @@ correctly completing the project.
   \setlength{\itemsep}{0pt}
 
 \item {\bf Follow each step carefully}. Slowly read each sentence in the
-  assignment sheet, making sure that you precisely follow each instruction.
-  Take notes about each step that you attempt, recording your questions and
-  ideas and the challenges that you faced. If you are stuck, then please tell a
-  teaching assistant or instructor what assignment step you recently completed.
+  assignment sheet, making sure that you precisely follow each instruction. Take
+  notes about each step that you attempt, recording your questions and ideas and
+  the challenges that you faced. If you are stuck, then please tell a technical
+  leader or instructor what assignment step you recently completed.
 
 \item {\bf Regularly ask and answer questions}. Please log into Slack at the
   start of a laboratory or practical session and then join the appropriate
@@ -202,14 +202,14 @@ correctly completing the project.
 \section*{Reading Assignment}
 
 If you have not done so already, please read all of the relevant ``GitHub
-Guides'', available at \url{https://guides.github.com/}, that explain how to
-use many of the features that GitHub provides. In particular, please make sure
-that you have read guides such as ``Mastering Markdown'' and ``Documenting Your
+Guides'', available at \url{https://guides.github.com/}, that explain how to use
+many of the features that GitHub provides. In particular, please make sure that
+you have read guides such as ``Mastering Markdown'' and ``Documenting Your
 Projects on GitHub''; each of them will help you to understand how to use both
-GitHub and GitHub Classroom. To do well on this assignment, you should also
-read Chapters 1 and 2 in the course textbook, paying particularly close
-attention to Sections 1.5 and 2.1. Please see the instructor or one of the
-teaching assistants if you have questions these reading assignments.
+GitHub and GitHub Classroom. To do well on this assignment, you should also read
+Chapters 1 and 2 in the course textbook, paying close attention to Sections 1.4
+and 1.5 and 2.1. Please see the instructor or one of the technical leaders if
+you have questions these reading assignments.
 
 \section*{Using Your Computer Science Account}
 
@@ -235,14 +235,13 @@ all of the steps to configure your account on GitHub and you will start your
 first assignment using GitHub Classroom. Throughout this assignment, you should
 refer to the following web sites for more information:
 \url{https://guides.github.com/} and, in particular,
-\url{https://guides.github.com/activities/hello-world/}. You can also learn
-more about GitHub Classroom by visiting \url{https://classroom.github.com/}. As
-you will be required to use Git, an industry standard tool, in all of the
-remaining laboratory and practical assignments and during the class sessions,
-you should keep a record of all of the steps that you complete and the
-challenges that you face. You may see the course instructor or one of the
-teaching assistants if you are not able to complete a certain step or if you
-are not sure how to proceed.
+\url{https://guides.github.com/activities/hello-world/}. You can also learn more
+about GitHub Classroom by visiting \url{https://classroom.github.com/}. As you
+will be required to use Git, an industry standard tool, in all of the remaining
+laboratory and practical assignments and during the class sessions, you should
+keep a record of all of the steps that you complete and the challenges that you
+face. You may see the course instructor or one of the technical leaders if you
+are not able to complete a certain step or if you are not sure how to proceed.
 
 \begin{enumerate}
 
@@ -285,31 +284,31 @@ are not sure how to proceed.
 
   \item \marginnote{\caution{Upload keys correctly}}[.05in] Once you have
     created your ssh keys, you should raise your hand to invite either a
-    teaching assistant or the course instructor to help you with the next
-    steps. First, you must log into GitHub and look in the right corner for an
-    account avatar with a down arrow. Click on this link and then select the
+    technical leader or the course instructor to help you with the next steps.
+    First, you must log into GitHub and look in the right corner for an account
+    avatar with a down arrow. Click on this link and then select the
     ``Settings'' option. Now, scroll down until you find the ``SSH and GPG
-    keys'' label on the left, click to create a ``New SSH key'', and then
-    upload your ssh key to GitHub. You can copy your SSH key to the clipboard
-    by going to the terminal and typing ``{\tt cat
-    \textasciitilde{}/.ssh/id\_rsa.pub}'' command and then highlighting this
-    output. When you are completing this step in your terminal window, please
-    make sure that you only highlight the letters and numbers in your key---if
-    you highlight any extra symbols or spaces then this step may not work
-    correctly. Then, paste this into the GitHub text field in your web browser.
+    keys'' label on the left, click to create a ``New SSH key'', and then upload
+    your ssh key to GitHub. You can copy your SSH key to the clipboard by going
+    to the terminal and typing ``{\tt cat \textasciitilde{}/.ssh/id\_rsa.pub}''
+    command and then highlighting this output. When you are completing this step
+    in your terminal window, please make sure that you only highlight the
+    letters and numbers in your key---if you highlight any extra symbols or
+    spaces then this step may not work correctly. Then, paste this into the
+    GitHub text field in your web browser.
 
   \item Again, when you are completing these steps, please make sure that you
     take careful notes about the inputs, outputs, and behavior of each command.
-    If there is something that you do not understand, then please ask the
-    course instructor or the teaching assistant about it.
+    If there is something that you do not understand, then please ask the course
+    instructor or the technical leader about it.
 
   \item Since this is your first laboratory assignment and you are still
-    learning how to use the appropriate software, don't become frustrated if
-    you make a mistake. Instead, use your mistakes as an opportunity for
-    learning both about the necessary technology and the background and
-    expertise of the other students in the class, the teaching assistants, and
-    the course instructor. Remember, you can use Slack to talk with the
-    instructor by typing \command{@gkapfham} in a channel.
+    learning how to use the appropriate software, don't become frustrated if you
+    make a mistake. Instead, use your mistakes as an opportunity for learning
+    both about the necessary technology and the background and expertise of the
+    other students in the class, the technical leaders, and the course
+    instructor. Remember, you can use Slack to talk with the instructor by
+    typing \command{@gkapfham} in a channel.
 
 \end{enumerate}
 
@@ -351,14 +350,14 @@ command in the terminal, it would look like:
   git clone git@github.com:Allegheny-Computer-Science-100-F2019/computer-science-100-fall-2019-lab-1-gkapfham.git
 \end{lstlisting}
 
-\marginnote{\discuss{Use terminal commands}}[.25in] After this command
-finishes, you can use \command{cd} to change into the new directory. If you
-want to \step{go back} one directory from your current location, then you can
-type the command \command{cd ..}. Please continue to use the \command{cd} and
+\marginnote{\discuss{Use terminal commands}}[.25in] After this command finishes,
+you can use \command{cd} to change into the new directory. If you want to
+\step{go back} one directory from your current location, then you can type the
+command \command{cd ..}. Please continue to use the \command{cd} and
 \command{ls} commands to explore the files that you automatically downloaded
 from GitHub. What files and directories do you see? What do you think is their
 purpose? Spend some time exploring, sharing your discoveries with a course
-colleague and a \mbox{teaching assistant}.
+colleague and a \mbox{technical leader}.
 
 \section*{Displaying Output with a Java Program}
 
@@ -397,14 +396,14 @@ the {\tt gvim} window open, go back to your terminal window. Now, you are ready
 to learn to use new tools that build and run your program and check its
 correctness!
 
-If you want to \step{build} your program you can type the command
-\gradlebuild{} in your terminal, thereby causing the Java compiler to check
-your program for errors and get it ready to run. If you get any error messages,
-go back into \program{gvim} and try to figure out what you mis-typed and fix
-it. Once you have solved the problem, make a note of the error and the solution
-for resolving it. Re-save your program and then build it again by re-running
-the \gradlebuild{}. If you cannot build \mainprogram{} correctly, then please
-talk with a teaching assistant or the instructor.
+If you want to \step{build} your program you can type the command \gradlebuild{}
+in your terminal, thereby causing the Java compiler to check your program for
+errors and get it ready to run. If you get any error messages, go back into
+\program{gvim} and try to figure out what you mis-typed and fix it. Once you
+have solved the problem, make a note of the error and the solution for resolving
+it. Re-save your program and then build it again by re-running the
+\gradlebuild{}. If you cannot build \mainprogram{} correctly, then please talk
+with a technical leader or the instructor.
 
 \marginnote{\think{Reflect on challenges}}[.75in] When all of the errors are
 eliminated, you can run your program by typing \gradlerun{} in the terminal
@@ -422,10 +421,10 @@ reports on your experiences. Now, verbally share your experiences with another
 class member!
 
 Since this is our first laboratory assignment and you are still learning how to
-use the appropriate hardware and software, don't become frustrated if you make
-a mistake. Instead, use your mistakes as an opportunity for learning both about
+use the appropriate hardware and software, don't become frustrated if you make a
+mistake. Instead, use your mistakes as an opportunity for learning both about
 the necessary technology and the background and expertise of the other students
-in the class, the teaching assistants, and the course instructor.
+in the class, the technical leaders, and the course instructor.
 
 \section*{Checking the Correctness of Your Program and Writing}
 
@@ -462,8 +461,8 @@ transfer to GitHub you would first type \gitcommitmainprogram{} in your
 terminal, followed by typing \gitpush{} and checking to see that the transfer to
 GitHub is successful. If you notice that transferring your code or writing to
 GitHub did not work correctly, then read the errors in your terminal window and
-please try to determine why, asking a teaching assistant or the course
-instructor for assistance, if necessary.
+please try to determine why, asking a technical leader or the course instructor
+for assistance, if necessary.
 
 \marginnote{\caution{Verify all checks}}[1in] After the course instructor
 enables \step{continuous integration} with a system called Travis CI, when you
