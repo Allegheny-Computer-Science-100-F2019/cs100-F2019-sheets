@@ -249,13 +249,21 @@ are not able to complete a certain step or if you are not sure how to proceed.
   \item If you have never done so before, you must use the \command{ssh-keygen}
     program to create secure-shell keys that you can use to support your
     communication with GitHub. But, to start, this task requires you to type
-    commands in a program that is known as a terminal. To run it, click on the
-    icon, on the left side of your screen, that contains the \command{>}
-    symbol. Alternatively, you can type the ``Super'' key, start typing the
-    word ``terminal'', and then select that program. Another way to open a
-    terminal involves typing the key combination \command{<Ctrl>-<Alt>-t}. Once
-    the Ubuntu terminal starts, it will display as a box into which you can
-    type commands.
+    commands in a program that is known as a terminal.
+    %
+    Your terminal program will vary depending on your operating system. For
+    instance, if you are running Linux, you can click on an icon that contains
+    the \command{>} symbol or press the ``Super'' key, start typing the word
+    ``terminal'', and then select that program. Another way to open a terminal
+    involves typing the key combination \command{<Ctrl>-<Alt>-t}.
+    %
+    On the Windows operating system you may want to use the ``Command Prompt''
+    or the ``Power Shell'' and on MacOS you can use ``Terminal''.
+    %
+    Your terminal will display as a box into which you can type commands.
+    %
+    You may need to separately install \command{ssh-keygen} if it is not
+    available on your laptop.
 
   \item \marginnote{\think{Understand SSH keys}}[.05in] Now that you have
     started the terminal, you will need to type the \command{ssh-keygen} command
@@ -339,7 +347,10 @@ command in the terminal, it would look like:
 \marginnote{\discuss{Use terminal commands}}[.25in] After this command finishes,
 you can use \command{cd} to change into the new directory. If you want to
 \step{go back} one directory from your current location, then you can type the
-command \command{cd ..}. Please continue to use the \command{cd} and
+command \command{cd ..}. If one of the aforementioned commands does not work
+correctly, it is possible that your terminal window is not up-to-date or not
+configured correctly --- in this case, please share your specific error messages
+with the course instructor. Finally, please continue to use the \command{cd} and
 \command{ls} commands to explore the files that you automatically downloaded
 from GitHub. What files and directories do you see? What do you think is their
 purpose? Spend some time exploring, sharing your discoveries with a course
@@ -478,11 +489,12 @@ to submit, using GitHub, the following deliverables.
 
 \setlength{\itemsep}{0in}
 
-\item Stored in \reflection{}, a one-paragraph reflection on the commands that
-  you typed in \command{gvim} and the terminal window. This Markdown-based
-  document should explain the input, output, and behavior of each command and
-  the challenges that you confronted when using it. For every challenge that
-  you encountered, please explain your solution for it.
+\item Stored in \reflection{}, a multiple-paragraph reflection on the commands
+  that you typed in the terminal window and the Java source code that you wrote
+  in your text editor. This Markdown-based document should explain the input,
+  output, and behavior of each command (e.g., \command{gradle build}) and the
+  challenges that you confronted when using it. For every challenge that you
+  encountered, please explain your solution for it.
 
 \item A properly documented, well-formatted, and correct version of
   \mainprogramsource{} that both meets all of the established requirements and
@@ -494,18 +506,16 @@ to submit, using GitHub, the following deliverables.
 
 Using a report that the instructor shares with you through the commit log in
 GitHub, you will privately received a grade on this assignment and feedback on
-your submitted deliverables. Your grade for the assignment will be a function
-of the whether or not it was submitted in a timely fashion and if your program
+your submitted deliverables. Your grade for the assignment will be a function of
+the whether or not it was submitted in a timely fashion and if your program
 received a green \checkmark{} indicating that it met all of the requirements.
 Other factors will also influence your final grade on the assignment. In
-addition to studying the efficiency and effectiveness of your Java source code,
-the instructor will also evaluate the accuracy of both your technical writing
-and the comments in your source code. If your submission receives a red
-\naughtmark{}, the instructor will reduce your grade for the assignment while
-still considering the regularity with which you committed to your GitHub
-repository and the overall quality of your partially completed work. Please see
-the instructor if you have questions about the evaluation of this laboratory
-assignment.
+addition to studying the efficiency and effectiveness and documentation of your
+Java source code, the instructor will also evaluate the correctness of your
+technical writing. If your submission receives a red \naughtmark{}, the
+instructor will reduce your grade for the assignment. Finally, please remember
+to read your GitHub repository's \program{README.md} file for a description of
+the four grades that you will receive for this laboratory assignment.
 
 \section*{Adhering to the Honor Code}
 
