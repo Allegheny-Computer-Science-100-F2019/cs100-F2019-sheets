@@ -358,49 +358,65 @@ time exploring, sharing your discoveries a \mbox{student technical leader}.
 
 \section*{Displaying Output with a Java Program}
 
-In order view the source code of a Java program or a Markdown-based writing
-assignment, you need a text editor. There are many different text editors on
-your workstation and you should feel free to explore these on your own. Since
-it is a powerful text editor known for helping computer scientists ``edit text
-at the speed of thought'', in this class we will normally use the text editor
-called \command{gvim}. Today, you will view and improve your first Java program
-in {\tt gvim}! To load the source code of today's Java program into
-\program{gvim}, you should type \command{gvim
-src/main/java/labone/DisplayOutput.java} in your terminal window. This should
-cause a new window, the \program{gvim} text editor, to appear on your screen.
-Since \program{gvim} is a modal editor, you may notice that if you start
-typing, nothing appears (unless you happen to hit certain letters such as
-\command{i}, \command{o}, \command{a}, and a few others). This is because you
-are not in ``insert mode.'' To get into insert mode, just type the letter
-\command{i} (lower case). Once you do this, the window should show the word
-\command{--INSERT--} in the lower left corner.
+Once you have installed Docker Desktop, you can use the following
+\command{docker run} command to start \command{gradle grade} as a containerized
+application, using the ``DockaGator'' Docker image available on DockerHub. You
+can run the following command to run the \command{gradle grade} on your project:
 
-This laboratory assignment invites you to implement a Java program that
-displays exactly four lines of output. The first output line should display
-your name and then today's date. The next three lines should each display some
-words of advice that you want to share with the person running your program.
-You can accomplish the first task by typing
-\command{System.out.println("Gregory M. Kapfhammer " + new Date());},
-substituting your name for the name of the course instructor. Your program will
-produce three additional lines of output once you add three more
-\command{System.out.println} statements. When you are finished typing text in
-\program{gvim}, press the ESC key located in the upper left corner of the
-keyboard. This should remove the word \command{--INSERT--} from the bottom of
-the screen and take you out of insert mode. Use the \option{File/Save} menu to
-save your program. Alternatively, if you would like to use the keyboard to save
-your file, you can press \command{:w} when you are not in insert mode. Leaving
-the {\tt gvim} window open, go back to your terminal window. Now, you are ready
-to learn to use new tools that build and run your program and check its
-correctness!
+\begin{verbatim}
+docker run --rm --name dockagator \
+  -v "$(pwd)":/project \
+  -v "$HOME/.dockagator":/root/.local/share \
+  gatoreducator/dockagator
+\end{verbatim}
 
-If you want to \step{build} your program you can type the command \gradlebuild{}
-in your terminal, thereby causing the Java compiler to check your program for
-errors and get it ready to run. If you get any error messages, go back into
-\program{gvim} and try to figure out what you mis-typed and fix it. Once you
-have solved the problem, make a note of the error and the solution for resolving
-it. Re-save your program and then build it again by re-running the
-\gradlebuild{}. If you cannot build \mainprogram{} correctly, then please talk
-with a technical leader or the instructor.
+The aforementioned command will use \program{"\$(pwd)"} (i.e., the current
+directory) as the project directory and \program{"\$HOME/.dockagator"} as the
+cached GatorGrader directory. Please note that both of these directories must
+exist, although only the project directory must contain something. Generally,
+the project directory should contain the source code and technical writing for
+this assignment, as provided to you through GitHub during the completion of a
+previous step. Additionally, the cache directory should not contain anything
+other than directories and programs created by DockaGator, thus ensuring that
+they are not otherwise overwritten during the completion of the assignment. To
+ensure that the previous command will work correctly, you should create the
+cache directory by running the command \command{mkdir \$HOME/.dockagator}. If
+the above \command{docker run} command does not work correctly on the Windows
+operating system, then you may need to instead run the following command to work
+around limitations in the terminal window:
+
+\begin{verbatim}
+docker run --rm --name dockagator \
+  -v "$(pwd):/project" \
+  -v "$HOME/.dockagator:/root/.local/share" \
+  gatoreducator/dockagator
+\end{verbatim}
+
+This laboratory assignment invites you to implement a Java program that displays
+exactly four lines of output. The first output line should display your name and
+then today's date. The next three lines should each display some words of advice
+that you want to share with the person running your program. You can accomplish
+the first task by typing \command{System.out.println("Gregory M. Kapfhammer " +
+new Date());}, substituting your name for the name of the course instructor.
+Your program will produce three additional lines of output once you add three
+more \command{System.out.println} statements. When you are finished typing text
+in your text editor, make sure to save your program. Leaving the text editor's
+window open, go back to your terminal window. Now, you are ready to learn to use
+new tools that build and run your program and check its correctness!
+
+Since your laptop normally would not have software development tools on it, you
+should use the Docker container to run all of the following commands. To enter
+into an ``interactive terminal'' in the Docker container, you can add
+\command{/bin/bash} to the end of the previous \command{docker run} command that
+you typed. If you are stuck on this step, check the GitHub repository's
+documentation for more details! Now, if you want to \step{build} your program
+you can type the command \gradlebuild{} in your terminal, thereby causing the
+Java compiler to check your program for errors and get it ready to run. If you
+get any error messages, go back into your text editor and try to figure out what
+you mis-typed and fix it. Once you have solved the problem, make a note of the
+error and the solution for resolving it. Re-save your program and then build it
+again by re-running the \gradlebuild{}. If you cannot build \mainprogram{}
+correctly, then please talk with a technical leader or the instructor.
 
 \marginnote{\think{Reflect on challenges}}[.75in] When all of the errors are
 eliminated, you can run your program by typing \gradlerun{} in the terminal
