@@ -262,8 +262,8 @@ are not able to complete a certain step or if you are not sure how to proceed.
     %
     Your terminal will display as a box into which you can type commands.
     %
-    You may need to separately install \command{ssh-keygen} if it is not
-    available on your laptop.
+    For the next step, you may need to separately install \command{ssh-keygen}
+    if it is not on your laptop.
 
   \item \marginnote{\think{Understand SSH keys}}[.05in] Now that you have
     started the terminal, you will need to type the \command{ssh-keygen} command
@@ -354,7 +354,7 @@ it is possible that your terminal window is not up-to-date or not configured
 correctly. In this case, please share your specific error messages with the
 instructor, ultimately working to master the use of terminal commands. What
 files and directories do you see? What do you think is their purpose? Spend some
-time exploring, sharing your discoveries a \mbox{student technical leader}.
+time exploring, telling your discoveries to a \mbox{student technical leader}.
 
 \section*{Displaying Output with a Java Program}
 
@@ -373,17 +373,17 @@ docker run --rm --name dockagator \
 The aforementioned command will use \program{"\$(pwd)"} (i.e., the current
 directory) as the project directory and \program{"\$HOME/.dockagator"} as the
 cached GatorGrader directory. Please note that both of these directories must
-exist, although only the project directory must contain something. Generally,
+exist, although only the project directory must contain some content. Generally,
 the project directory should contain the source code and technical writing for
 this assignment, as provided to you through GitHub during the completion of a
 previous step. Additionally, the cache directory should not contain anything
 other than directories and programs created by DockaGator, thus ensuring that
 they are not otherwise overwritten during the completion of the assignment. To
 ensure that the previous command will work correctly, you should create the
-cache directory by running the command \command{mkdir \$HOME/.dockagator}. If
-the above \command{docker run} command does not work correctly on the Windows
-operating system, then you may need to instead run the following command to work
-around limitations in the terminal window:
+cache directory by running the command \command{mkdir \$HOME/.dockagator}; you
+will only need to do this once. If the above \command{docker run} command does
+not work correctly on the Windows operating system, then you may need to instead
+run the following command to work around limitations in the terminal window:
 
 \begin{verbatim}
 docker run --rm --name dockagator \
