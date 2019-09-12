@@ -406,19 +406,20 @@ in your text editor, make sure to save your program. Leaving the text editor's
 window open, go back to your terminal window. Now, you are ready to learn to use
 new tools that build and run your program and check its correctness!
 
-Since your laptop normally would not have software development tools on it, you
-should use the Docker container to run all of the following commands. To enter
-into an ``interactive terminal'' in the Docker container, you can add
-\command{/bin/bash} to the end of the previous \command{docker run} command that
-you typed. If you are stuck on this step, check the GitHub repository's
-documentation for more details! Now, if you want to \step{build} your program
-you can type the command \gradlebuild{} in your terminal, thereby causing the
-Java compiler to check your program for errors and get it ready to run. If you
-get any error messages, go back into your text editor and try to figure out what
-you mis-typed and fix it. Once you have solved the problem, make a note of the
-error and the solution for resolving it. Re-save your program and then build it
-again by re-running the \gradlebuild{}. If you cannot build \mainprogram{}
-correctly, then please talk with a technical leader or the instructor.
+Since your laptop normally would not have software development tools installed
+on it, you should use the Docker container to run the following commands. To
+enter into an ``interactive terminal'' in the Docker container, you can add
+\command{-it} before \command{--rm} and \command{/bin/bash} to the end of the
+previous \command{docker run} command that you typed. If you are stuck on this
+step, check your GitHub repository's documentation for more details! Now, if
+you want to \step{build} your program you can type the command \gradlebuild{}
+in your terminal, thereby causing the Java compiler to check your program for
+errors and get it ready to run. If you get any error messages, go back into
+your text editor and try to figure out what you mis-typed and fix it. Once you
+have solved the problem, make a note of the error and the solution for
+resolving it. Re-save your program and then build it again by re-running the
+\gradlebuild{}. If you cannot build \mainprogram{} correctly, then please talk
+with a student technical leader or the course instructor.
 
 \marginnote{\think{Reflect on challenges}}[.75in] When all of the errors are
 eliminated, you can run your program by typing \gradlerun{} in the terminal
