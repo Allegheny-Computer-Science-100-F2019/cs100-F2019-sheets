@@ -155,7 +155,7 @@ Java program.
   start of a laboratory or practical session and then join the appropriate
   channel. If you have a question about one of the steps in an assignment, then
   you can post it to the designated channel. Or, you can ask a student sitting
-  next to you or talk with a teaching assistant or the course instructor.
+  next to you or talk with a technical leader or the course instructor.
 
 \item {\bf Store your files in GitHub}. Starting with this laboratory
   assignment, you will be responsible for storing all of your files (e.g., Java
@@ -176,15 +176,14 @@ Java program.
   give you the opportunity to learn both fundamental concepts in the field of
   computer science and explore advanced technologies that are commonly employed
   at a wide variety of companies. To explore and develop new ideas, you should
-  regularly communicate with your team and/or the teaching assistants and
-  tutors.
+  regularly communicate with your team and/or the student technical leaders.
 
 \item {\bf Hone your technical writing skills}. Computer science assignments
   require to you write technical documentation and descriptions of your
   experiences when completing each task. Take extra care to ensure that your
   writing is interesting and both grammatically and technically correct,
   remembering that computer scientists must effectively communicate and
-  collaborate with their team members and the tutors, teaching assistants, and
+  collaborate with their team members and the student technical leaders and
   course instructor.
 
 \item {\bf Review the Honor Code on the syllabus}. While you may discuss your
@@ -248,7 +247,7 @@ the command \command{cd ..}. Please continue to use the \command{cd} and
 \command{ls} commands to explore the files that you automatically downloaded
 from GitHub. What files and directories do you see? What do you think is their
 purpose? Spend some time exploring, sharing your discoveries with a neighbor and
-a \mbox{teaching assistant}.
+a \mbox{technical leader}.
 
 \section*{Performing a Computation in Java with Variables}
 
@@ -300,14 +299,14 @@ source code comments for more details!
 % when you are not in insert mode. Leaving the {\tt gvim} window open, go back to
 % your terminal window.
 
-If you want to \step{build} your program you can type the command \gradlebuild{}
-in your terminal, thereby causing the Java compiler to check your program for
-errors and get it ready to run. If you see any error messages, go back into
-\program{gvim} and try to figure out what you mis-typed and fix it. Once you
-have solved the problem, make a note of the error and the solution for resolving
-it. Re-save your program and then build it again by re-running the
-\gradlebuild{}. If you cannot build \mainprogram{} correctly, then please talk
-with a teaching assistant or the instructor.
+If you want to \step{build} your program you can type the command
+\gradlebuild{} in your terminal, thereby causing the Java compiler to check
+your program for errors and get it ready to run. If you see any error messages,
+go back into \program{gvim} and try to figure out what you mis-typed and fix
+it. Once you have solved the problem, make a note of the error and the solution
+for resolving it. Re-save your program and then build it again by re-running
+the \gradlebuild{}. If you cannot build \mainprogram{} correctly, then please
+talk with a technical leader or the instructor.
 
 \marginnote{\think{Reflect on challenges}}[.75in] When all of the errors are
 eliminated, you can run your program by typing \gradlerun{} in the terminal
@@ -338,11 +337,11 @@ explain the purpose and behavior of these statements?
 \end{itemize}
 \vspace*{-.1in}
 
-Since this is our second laboratory assignment and you are still learning how to
-use the appropriate hardware and software, don't become frustrated if you make a
-mistake. Instead, use your mistakes as an opportunity for learning both about
-the necessary technology and the background and expertise of the other students
-in the class, the teaching assistants, and the course instructor.
+Since this is our second laboratory assignment and you are still learning how
+to use the appropriate hardware and software, don't become frustrated if you
+make a mistake. Instead, use your mistakes as an opportunity for learning both
+about the necessary technology and the background and expertise of the other
+students in the class, the technical leaders, and the course instructor.
 
 \section*{Checking the Correctness of Your Program and Writing}
 
@@ -365,22 +364,21 @@ of output, that you use the \command{new Date()} construct in the Java source
 code, and that you correctly compute the average distance to the moon in yards.
 
 \marginnote{\caution{Write useful commits}}[.75in] To get started with the use
-of GatorGrader, type the command \gatorgraderstart{} in your terminal window. If
-your laboratory work does not meet all of the assignment's requirements, then
-you will see a summary of the failing checks along with a statement giving the
-percentage of checks that are currently passing. If you do have mistakes in your
-assignment, then you will need to review GatorGrader's output, find the mistake,
-and try to fix it. Once your program is building correctly, fulfilling at least
-some of the assignment's requirements, you should transfer your files to GitHub
-using the \gitcommit{} and \gitpush{} commands. For example, if you want to
-signal that the \mainprogramsource{} file has been changed and is ready for
-transfer to GitHub you would first type \gitcommitmainprogram{} in your
-terminal, followed by typing \gitpush{} and checking to see that the transfer to
-GitHub is successful. If you notice that transferring your code or writing to
-GitHub did not work correctly, then read the errors in your terminal window and
-please try to determine why, asking a teaching assistant or the course
+of GatorGrader, type the command \gatorgraderstart{} in your terminal window.
+If your laboratory work does not meet all of the assignment's requirements,
+then you will see a summary of the failing checks along with a statement giving
+the percentage of checks that are currently passing. If you do have mistakes in
+your assignment, then you will need to review GatorGrader's output, find the
+mistake, and try to fix it. Once your program is building correctly, fulfilling
+at least some of the assignment's requirements, you should transfer your files
+to GitHub using the \gitcommit{} and \gitpush{} commands. For example, if you
+want to signal that the \mainprogramsource{} file has been changed and is ready
+for transfer to GitHub you would first type \gitcommitmainprogram{} in your
+terminal, followed by typing \gitpush{} and checking to see that the transfer
+to GitHub is successful. If you notice that transferring your code or writing
+to GitHub did not work correctly, then read the errors in your terminal window
+and please try to determine why, asking a technical leader or the course
 instructor for assistance, if necessary.
-
 
 \marginnote{\caution{Verify all checks}}[1in] After the course instructor
 enables \step{continuous integration} with a system called Travis CI, when you
