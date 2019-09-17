@@ -253,7 +253,7 @@ a \mbox{technical leader}.
 
 \begin{figure}[tb]
   \begin{verbatim}
-    Gregory M. Kapfhammer Tue Sep 11 12:24:51 EDT 2019
+    Gregory M. Kapfhammer Tue Sep 17 11:29:16 EDT 2019
     Distance to the moon in miles: 238855
     Number of miles in a yard: 1760
     Number of yards to the moon is: 420384800
@@ -265,20 +265,17 @@ a \mbox{technical leader}.
 
 In order view the source code of a Java program or a Markdown-based writing
 assignment, you need a text editor. There are many different text editors on
-your workstation and you should feel free to explore these on your own. Since it
-is a powerful text editor known for helping computer scientists ``edit text at
-the speed of thought'', in this class we will normally use the text editor
-called \command{gvim}. Today, you will view and improve your second Java program
-in {\tt gvim}! To load the source code of today's Java program into
-\program{gvim}, you should type \command{gvim
-src/main/java/labtwo/ComputeMoonDistance.java} in your terminal window. This
-should cause a new window, the \program{gvim} text editor, to appear on your
-screen. Since \program{gvim} is a modal editor, you may notice that if you start
-typing, nothing appears (unless you happen to hit certain letters such as
-\command{i}, \command{o}, \command{a}, and a few others). This is because you
-are not in ``insert mode.'' To get into insert mode, just type the letter
-\command{i} (lower case). Once you do this, the window should show
-\command{--INSERT--} in the lower left corner.
+your laptop and you should feel free to explore these on your own. Today, you
+will view and improve a new Java program in your text editor! After you are in
+your ``home base'' for this laboratory assignment in your terminal window and
+text editor, please load the \mainprogramsource{} and \reflection{} into your
+text editor. What do you see in these files? Please review the source code and
+technical writing files, making note of the locations where you see
+\program{TODO} markers for the tasks that you must complete. For instance, you
+should notice that the \mainprogramsource{} requires you to write the
+\command{import} statements for \program{java.util.Scanner} and
+\program{java.util.Date}. Why won't the Java program compile without those lines
+of code?
 
 \marginnote{\think{Use program variables}}[.5in] This laboratory assignment
 invites you to implement a Java program that displays exactly four lines of
@@ -298,6 +295,42 @@ source code comments for more details!
 % you would like to use the keyboard to save your file, you can press \command{:w}
 % when you are not in insert mode. Leaving the {\tt gvim} window open, go back to
 % your terminal window.
+
+Once you have installed Docker Desktop, you can use the following
+\command{docker run} command to start \command{gradle grade} as a containerized
+application, using the ``DockaGator'' Docker image available on DockerHub. You
+can run the following command to run the \command{gradle grade} on your project:
+
+\begin{verbatim}
+docker run --rm --name dockagator \
+  -v "$(pwd)":/project \
+  -v "$HOME/.dockagator":/root/.local/share \
+  gatoreducator/dockagator
+\end{verbatim}
+
+The aforementioned command will use \program{"\$(pwd)"} (i.e., the current
+directory) as the project directory and \program{"\$HOME/.dockagator"} as the
+cached GatorGrader directory. Please note that both of these directories must
+exist, although only the project directory must contain some content. Generally,
+the project directory should contain the source code and technical writing for
+this assignment, as provided to you through GitHub during the completion of a
+previous step. Additionally, the cache directory should not contain anything
+other than directories and programs created by DockaGator, thus ensuring that
+they are not otherwise overwritten during the completion of the assignment. If
+the above \command{docker run} command does not work correctly on the Windows
+operating system, then you may need to instead run the following command to work
+around limitations in the terminal window. Please recall that some Windows
+terminal emulators may not correctly interpret \command{\$(pwd)} or
+\command{\$HOME}, meaning that you must ``expand'' them to include the correct
+path for this assignment.
+
+\begin{verbatim}
+docker run --rm --name dockagator \
+  -v "$(pwd):/project" \
+  -v "$HOME/.dockagator:/root/.local/share" \
+  gatoreducator/dockagator
+\end{verbatim}
+
 
 If you want to \step{build} your program you can type the command
 \gradlebuild{} in your terminal, thereby causing the Java compiler to check
