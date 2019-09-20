@@ -48,7 +48,7 @@
 \newcommand{\gitpull}{\command{git pull}}
 
 \newcommand{\gitcommitmainprogram}{\command{git commit src/main/java/practicalthree/ComputeMoonDistance.java -m "Your
-descriptive commit message about the defect that you fixed"}}
+descriptive message about the defect that you fixed"}}
 
 % Use this when displaying a new command
 
@@ -110,33 +110,24 @@ descriptive commit message about the defect that you fixed"}}
 
 To continue practicing the use of GitHub to access the files for a practical
 assignment. Additionally, to practice using the Ubuntu operating system and
-software development programs such as a ``terminal window'' and the ``GVim text
-editor''. You will continue to practice using Slack to support communication
-with the teaching assistants and the course instructor. Next, you will learn how
-to fix a Java program, further discovering how the course's automated grading
-tool assesses your progress towards correctly completing the project. Finally,
-you will continue to learn more about variables and data types and the errors
-that may arise when variables have the wrong types.
+software development programs such as a ``terminal window'' and the ``Docker
+desktop''. You will continue to practice using Slack to support communication
+with the teaching assistants and the course instructor. Next, you will learn
+how to fix a Java program, further discovering how the course's automated
+grading tool assesses your progress towards correctly completing the project.
+Finally, you will continue to learn more about variables and data types and the
+errors that may arise when variables have the wrong types.
 
 \section*{Suggestions for Success}
 
 \begin{itemize}
   \setlength{\itemsep}{0pt}
 
-\item {\bf Use the laboratory computers}. The computers in this laboratory
-  feature specialized software for completing this course's Laboratory and
-  practical assignments. If it is necessary for you to work on a different
-  machine, be sure to regularly transfer your work to a laboratory machine so
-  that you can check its correctness. If you cannot use a laboratory computer
-  and you need help with the configuration of your own laptop, then please
-  carefully explain its setup to a teaching assistant or the course instructor
-  when you are asking questions.
-
 \item {\bf Follow each step carefully}. Slowly read each sentence in the
-  assignment sheet, making sure that you precisely follow each instruction. Take
-  notes about each step that you attempt, recording your questions and ideas and
-  the challenges that you faced. If you are stuck, then please tell a teaching
-  assistant or instructor what assignment step you recently completed.
+  assignment sheet, making sure that you precisely follow each instruction.
+  Take notes about each step that you attempt, recording your questions and
+  ideas and the challenges that you faced. If you are stuck, then please tell a
+  teaching assistant or instructor what assignment step you recently completed.
 
 \item {\bf Regularly ask and answer questions}. Please log into Slack at the
   start of a laboratory or practical session and then join the appropriate
@@ -148,30 +139,22 @@ that may arise when variables have the wrong types.
   will be responsible for storing all of your files (e.g., Java source code and
   Markdown-based writing) in a Git repository using GitHub Classroom. Please
   verify that you have saved your source code in your Git repository by using
-  \command{git status} to ensure that everything is updated. You can see if your
-  assignment submission meets the established correctness requirements by using
-  the provided checking tools on your local computer and in checking the commits
-  in GitHub.
+  \command{git status} to ensure that everything is updated. You can see if
+  your assignment submission meets the established correctness requirements by
+  using the provided checking tools on your local computer and in checking the
+  commits in GitHub.
 
 \item {\bf Keep all of your files}. Don't delete your programs, output files,
   and written reports after you submit them through GitHub; you will need them
   again when you study for the quizzes and examinations and work on the other
   laboratory, practical, and final project assignments.
 
-\item {\bf Back up your files regularly}. All of your files are regularly
-  backed-up to the servers in the Department of Computer Science and, if you
-  commit your files regularly, stored on GitHub. However, you may want to use a
-  flash drive, Google Drive, or your favorite backup method to keep an extra
-  copy of your files on reserve. In the event of any type of system failure, you
-  are responsible for ensuring that you have access to a recent backup copy of
-  all your files.
-
 \item {\bf Explore teamwork and technologies}. While certain aspects of these
   assignments will be challenging for you, each part is designed to give you the
   opportunity to learn both fundamental concepts in the field of computer
   science and explore advanced technologies that are commonly employed at a wide
   variety of companies. To explore and develop new ideas, you should regularly
-  communicate with your team and/or the teaching assistants and tutors.
+  communicate with your team and/or the student technical leaders.
 
 \item {\bf Hone your technical writing skills}. Computer science assignments
   require to you write technical documentation and descriptions of your
@@ -228,7 +211,7 @@ into the code to explain the problem that you found and the way in which you
 decided to handle it. As you complete this practical assignment, make sure that
 you regularly commit your code to GitHub and use descriptive messages that say
 what you fixed. Here are some questions about Java programming that should help
-you find defects in the provided code:
+you think about potential defects:
 
 \vspace*{-.05in}
 
@@ -250,52 +233,38 @@ you find defects in the provided code:
   \item What type of method do you call if you want a Java program to produce
     console output?
 
+  \item What is the purpose of the \command{import} statement(s) appearing at
+    the top of a Java program?
+
+  \item What is the full name of the \command{main} method in a Java program?
+    What does this method do?
+
+  \item What are the similarities and differences between the \program{String} and
+    {\tt int} data types?
+
 \end{enumerate}
 
 \vspace*{-.05in}
 
 \section*{Checking the Correctness of Your Program and Writing}
 
-As in the past assignments, you are provided with automated tools for checking
-the quality of your source code. To automatically check your Java source code
-you can get started with the use of the GatorGrader tool, typing the command
-\gatorgraderstart{} in your terminal window. If you do have mistakes in your
-assignment, then you will need to review GatorGrader's output, find the mistake,
-and try to fix it. Remember, this practical assignment provides you with Java
-source code that purposefully contains syntactic mistakes that will lead to
-compiler errors --- your task is to find and fix these problems! Once you
-correctly resolve a new compiler error, fulfilling at least some of the
-assignment's requirements, you should transfer your files to GitHub using the
-\gitcommit{} and \gitpush{} commands. For example, if you want to signal that
-the \mainprogramsource{} file has been changed and is ready for transfer to
-GitHub you would first type \gitcommitmainprogram{} in your terminal, followed
-by typing \gitpush{} and then checking to see that the transfer to GitHub is
-successful.
-
-% If you notice that transferring your code or writing to GitHub did
-% not work correctly, then please try to determine why, asking a teaching
-% assistant or the course instructor for help, if necessary.
-
-% Also, once your program is building correctly, fulfilling at least some of the
-% assignment's requirements, you should transfer your files to GitHub using the
-% \gitcommit{} and \gitpush{} commands. For example, if you want to signal that
-% the \mainprogramsource{} file has been changed and is ready for transfer to
-% GitHub you would first type \gitcommitmainprogram{} in your terminal, followed
-% by typing \gitpush{} and checking to see that the transfer to GitHub is
-% successful. If you notice that transferring your Java source code to GitHub
-% did not work correctly, then please try to determine why, asking a teaching
-% assistant or the course instructor for assistance, if necessary.
-
-% As in the past assignments, you are provided with an automated tool for checking
-% the quality of your source code. Please note that the practical assignments do
-% not require you to produce a writing document as you do in the laboratory
-% assignments. However, to check your Java source code you can started with the
-% use of GatorGrader, type the command \gatorgraderstart{} in your terminal
-% window. Once this step completes you can type \gatorgradercheck{}. If your work
-% does not meet all of the assignment's requirements, then you will see the
-% following output in your terminal: \command{Overall, are there any mistakes in
-% the assignment? Yes}. If you do have mistakes in your assignment, then you will
-% need to review GatorGrader's output, find the mistake, and try to fix it.
+As in the past assignments, you are provided with an automated tool for checking
+the quality of your source code. Please note that the practical assignments do
+not require you to create technical writing as you do in the laboratory
+assignments. To automatically check your Java source code you can get started
+with the use of GatorGrader in Docker by typing the command \gatorgraderstart{}
+after entering a container's \program{/bin/bash} prompt. If you do have mistakes
+in your assignment, then you will need to review GatorGrader's output, find the
+mistake, and try to fix it. Also, once your program is building correctly,
+fulfilling at least some of the assignment's requirements, you should transfer
+your files to GitHub using the \gitcommit{} and \gitpush{} commands. For
+example, if you want to signal that the \mainprogramsource{} file has been
+changed and is ready for transfer to GitHub you would first type
+\gitcommitmainprogram{} in your terminal, followed by typing \gitpush{} and
+checking to see that the transfer to GitHub is successful. If you notice that
+transferring your source code to GitHub did not work correctly, then try to
+determine why, asking a technical leader or the course instructor for
+assistance, if necessary.
 
 After the course instructor enables \step{continuous integration} with a system
 called Travis CI, when you use the \gitpush{} command to transfer your source
@@ -303,21 +272,16 @@ code to your GitHub repository, Travis CI will initialize a \step{build} of your
 assignment, checking to see if it meets all of the requirements. If both your
 source code and writing meet all of the established requirements, then you will
 see a green \checkmark{} in the listing of commits in GitHub after awhile. If
-your submission does not meet the requirements, a red \naughtmark{} will appear
-instead. The instructor will reduce a student's grade for this assignment if the
-red \naughtmark{} appears on the last commit in GitHub immediately before the
-assignment's due date. Yet, if the green \checkmark{} appears on the last commit
-in your GitHub repository, then you satisfied all of the main checks. Unless you
-provide the course instructor with documentation of the extenuating
-circumstances that you are facing, no late work will be considered towards your
-completion grade for this practical assignment. You should aim to finish
-practical assignments on the day that they are assigned; please see the
-instructor if you do not understand this policy.
+your submission does not meet the requirements, then a red \naughtmark{} will
+appear instead. The instructor will reduce a student's grade for this assignment
+if the red \naughtmark{} appears on the last commit in GitHub immediately before
+the assignment's due date. Yet, if the green \checkmark{} appears on the last
+commit in your GitHub repository, then you satisfied all of the baseline checks
+and you will earn full credit. Unless you provide the course instructor with
+documentation of the extenuating circumstances that you are facing, no late work
+will be considered towards your completion grade for this practical assignment.
 
 \section*{Summary of the Required Deliverables}
-
-% Students do not need to submit printed source code or technical
-% writing for any assignment in this course.
 
 \noindent This assignment invites you to submit, using GitHub, the following
 deliverable. Because this is a practical assignment, you are not required to
@@ -330,9 +294,11 @@ complete any technical writing.
 \item A properly documented, well-formatted, and correct version of
   \mainprogramsource{} that both meets all of the established requirements and
   produces the desired output. In addition to your Java source code no longer
-  containing any defects that ``break the build'', it must feature additional
+  containing any defects that ``break the build'', it should feature additional
   comments that explain each of the mistakes that you found and a clear
-  statement of the process you followed to find and fix them.
+  statement of the process you followed to find and fix them. As you fix
+  defects, make sure that your incrementally commit your work to your GitHub
+  repository!
 
 \end{enumerate}
 
@@ -343,17 +309,18 @@ If your GitHub repository has a \checkmark{} for the last commit before the
 deadline then you will receive the highest possible grade for the assignment.
 However, you will fail the assignment if you do not complete it correctly, as
 evidenced by a red \naughtmark{} in your commit listing, by the set deadline for
-completing the project. Please see the course instructor if you do not
-understand how practical assignments are graded or you do not know how to
-complete one of the specific tasks in this assignment.
+finishing the project.
 
-% \section*{Adhering to the Honor Code}
+\section*{Adhering to the Honor Code}
 
-% In adherence to the Honor Code, students should complete this assignment on an individual basis. While it is appropriate
-% for students in this class to have high-level conversations about the assignment, it is necessary to distinguish
-% carefully between the student who discusses the principles underlying a problem with others and the student who produces
-% assignments that are identical to, or merely variations on, someone else's work. Deliverables (e.g., Java source code or
-% Markdown-based technical writing) that are nearly identical to the work of others will be taken as evidence of violating
-% the \mbox{Honor Code}. Please see the course instructor if you have questions about this policy.
+In adherence to the Honor Code, students should complete this assignment on an
+individual basis. While it is appropriate for students in this class to have
+high-level conversations about the assignment, it is necessary to distinguish
+carefully between the student who discusses the principles underlying a problem
+with others and the student who produces assignments that are identical to, or
+merely variations on, someone else's work. Deliverables (e.g., Java source code
+or Markdown-based technical writing) that are nearly identical to the work of
+others will be taken as evidence of violating the \mbox{Honor Code}. Please see
+the course instructor if you have questions about this policy.
 
 \end{document}
