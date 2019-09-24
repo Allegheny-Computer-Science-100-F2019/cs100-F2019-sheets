@@ -4,8 +4,8 @@
 
 % Edit these commands for each assignment
 
-\newcommand{\assignmentduedate}{September 25}
-\newcommand{\assignmentassignedate}{September 18}
+\newcommand{\assignmentduedate}{October 1}
+\newcommand{\assignmentassignedate}{September 24}
 \newcommand{\assignmentnumber}{Three}
 
 \newcommand{\labyear}{2019}
@@ -130,8 +130,8 @@ descriptive commit message"}}
 
 To continue to practice using GitHub to access the files for a laboratory
 assignment. Additionally, to master the use of the Ubuntu operating system and
-software development programs such as a ``terminal window'' and the ``GVim text
-editor''. You will also continue to practice using Slack to support
+software development programs such as a ``terminal window'' and the ``Docker
+desktop''. You will also continue to practice using Slack to support
 communication with the teaching assistants and the course instructor. Next, you
 will learn how to implement a Java program that reads input values from a file
 and displays output to the user. Finally, you will continue to explore the use
@@ -142,63 +142,45 @@ of variables with different data types.
 \begin{itemize}
   \setlength{\itemsep}{0pt}
 
-\item {\bf Use the laboratory computers}. The computers in this laboratory
-  feature specialized software for completing this course's laboratory and
-  practical assignments. If it is necessary for you to work on a different
-  machine, be sure to regularly transfer your work to a laboratory machine so
-  that you can check its correctness. If you cannot use a laboratory computer
-  and you need help with the configuration of your own laptop, then please
-  carefully explain its setup to a teaching assistant or the course instructor
-  when you are asking questions.
-
 \item {\bf Follow each step carefully}. Slowly read each sentence in the
   assignment sheet, making sure that you precisely follow each instruction. Take
   notes about each step that you attempt, recording your questions and ideas and
-  the challenges that you faced. If you are stuck, then please tell a teaching
-  assistant or instructor what assignment step you recently completed.
+  the challenges that you faced. If you are stuck, then please tell a technical
+  leader or instructor what assignment step you recently completed.
 
 \item {\bf Regularly ask and answer questions}. Please log into Slack at the
   start of a laboratory or practical session and then join the appropriate
   channel. If you have a question about one of the steps in an assignment, then
   you can post it to the designated channel. Or, you can ask a student sitting
-  next to you or talk with a teaching assistant or the course instructor.
+  next to you or talk with a technical leader or the course instructor.
 
-\item {\bf Store your files in GitHub}. As in the past laboratory assignments,
-  you will be responsible for storing all of your files (e.g., Java source code
-  and Markdown-based writing) in a Git repository using GitHub Classroom. Please
-  verify that you have saved your source code in your Git repository by using
-  \command{git status} to ensure that everything is updated. You can see if your
-  assignment submission meets the established correctness requirements by using
-  the provided checking tools on your local computer and in checking the commits
-  in GitHub.
+\item {\bf Store your files in GitHub}. Starting with this laboratory
+  assignment, you will be responsible for storing all of your files (e.g., Java
+  source code and Markdown-based writing) in a Git repository using GitHub
+  Classroom. Please verify that you have saved your source code in your Git
+  repository by using \command{git status} to ensure that everything is
+  updated. You can see if your assignment submission meets the established
+  correctness requirements by using the provided checking tools on your local
+  computer and by checking the commits in GitHub.
 
 \item {\bf Keep all of your files}. Don't delete your programs, output files,
   and written reports after you submit them through GitHub; you will need them
   again when you study for the quizzes and examinations and work on the other
   laboratory, practical, and final project assignments.
 
-\item {\bf Back up your files regularly}. All of your files are regularly
-  backed-up to the servers in the Department of Computer Science and, if you
-  commit your files regularly, stored on GitHub. However, you may want to use a
-  flash drive, Google Drive, or your favorite backup method to keep an extra
-  copy of your files on reserve. In the event of any type of system failure, you
-  are responsible for ensuring that you have access to a recent backup copy of
-  all your files.
-
 \item {\bf Explore teamwork and technologies}. While certain aspects of the
   laboratory assignments will be challenging for you, each part is designed to
   give you the opportunity to learn both fundamental concepts in the field of
   computer science and explore advanced technologies that are commonly employed
   at a wide variety of companies. To explore and develop new ideas, you should
-  regularly communicate with your team and/or the teaching assistants and
-  tutors.
+  regularly communicate with your team and/or the student technical leaders.
 
 \item {\bf Hone your technical writing skills}. Computer science assignments
   require to you write technical documentation and descriptions of your
   experiences when completing each task. Take extra care to ensure that your
   writing is interesting and both grammatically and technically correct,
   remembering that computer scientists must effectively communicate and
-  collaborate with their team members and the tutors, teaching assistants, and
+  collaborate with their team members and the student technical leaders and
   course instructor.
 
 \item {\bf Review the Honor Code on the syllabus}. While you may discuss your
@@ -261,40 +243,40 @@ location, then you can type the command \command{cd ..}. Please continue to use
 the \command{cd} and \command{ls} commands to explore the files that you
 automatically downloaded from GitHub. What files and directories do you see?
 What do you think is their purpose? Spend some time exploring, sharing your
-discoveries with a neighbor and a \mbox{teaching assistant}.
+discoveries with a neighbor and a \mbox{student technical leader}.
 
 \section*{Reading from a File and Computing with Variables}
 
-% In order view the source code of a Java program or a Markdown-based writing
-% assignment, you need a text editor. There are many different text editors on
-% your workstation and you should feel free to explore these on your own. Since
-% it is a powerful text editor known for helping computer scientists ``edit text
-% at the speed of thought'', in this class we will normally use the text editor
-% called \command{gvim}.
+Today, you will view and improve another Java program in your text editor! To
+get started, make sure that you can load the Java source code in your text
+editor and find the Markdown-based file in which you will include your technical
+writing. After you have started a terminal window and entered into the provided
+Docker container, build the program and notice that it is not compiling
+correctly! After you have solved this issue, please make sure that you can
+explain the meaning and purpose of the following Java source code segments. If
+you are not sure how these code segments influence the compilation and execution
+of the program, please talk with the course instructor.
 
-\marginnote{\think{Explore text editor}}[.5in] Today, you will view and
-improve another Java program in {\tt gvim}! To load the source code of today's
-Java program into \program{gvim}, you should type \command{gvim
-src/main/java/labthree/TipCalculator.java} in your terminal window. This should
-cause a new window, the \program{gvim} text editor, to appear on your screen.
-Since \program{gvim} is a modal editor, you may notice that if you start typing,
-nothing appears (unless you happen to hit certain letters such as \command{i},
-\command{o}, \command{a}, and a few others). This is because you are not in
-``insert mode.'' To get into insert mode, just type the letter \command{i}
-(lower case). Once you do this, the window should show \command{--INSERT--} in
-the lower left corner.
+\begin{itemize}
+
+  \item \program{import java.io.FileNotFoundException;}
+  \item \program{import java.util.Scanner;}
+  \item \program{String name = scanner.nextLine();}
+  \item \program{System.out.println(name + ", welcome to the tip calculator.");}
+
+\end{itemize}
 
 \marginnote{\think{Research file input}}[.5in] This assignment invites you to
 implement a Java program that displays exactly ten lines of output. The first
 output line should display your name and then today's date. You can accomplish
 the first task by typing \command{System.out.println("Gregory M. Kapfhammer " +
 new Date());}, substituting your name for the name of the course instructor.
-Your program will produce nine additional lines of output once you add eight
-more \command{System.out.println} statements. Unlike your previous Java
-programs, this Java program must read input values from a file and then use
-these inputs to perform computations and to produce outputs. Please see the Java
-source code comments for more details! The remainder of this section summarizes
-the purpose of this program for tip calculation.
+Your program will produce nine additional lines of output once you add more
+\command{System.out.println} statements. Unlike your previous Java programs,
+this Java program must read input values from a file and then use these inputs
+to perform computations and to produce outputs. Please see the Java source code
+comments for more details! The remainder of this section summarizes the purpose
+of this program for tip calculation.
 
 This assignment asks you to write a Java program, \mainprogramsource{}, that
 will calculate the tip, the total bill for the user, and each person's share of
@@ -350,7 +332,7 @@ program needs to do the following:
 
 \end{enumerate}
 
-\noindent If a steps says to ``ask the user'' this means the program should read
+\noindent If a step says to ``ask the user'' this means the program should read
 from a file. A sample run is:
 
 \begin{verbatim}
@@ -370,7 +352,18 @@ With the exception of the name and date on which the program was run, your
 \mainprogramsource{} should produce the same output as seen in the above
 example. Additionally, you should try to edit the \mainprograminput{} file so
 that it provides different inputs to the program. Does your \mainprogram{} still
-produce the expected output?
+produce the expected output? Remember, you need to run the program inside of a
+Docker container, using a command like the following one. Don't forget that you
+may have to adjust them command for your specific operating system and terminal
+window, consulting the instructor if you need assistance with the use of Docker
+desktop.
+
+\begin{verbatim}
+docker run -it --rm --name dockagator \
+  -v "$(pwd):/project" \
+  -v "$HOME/.dockagator:/root/.local/share" \
+  gatoreducator/dockagator /bin/bash
+\end{verbatim}
 
 % Whenever you are finished typing Java code in \program{gvim}, press the ESC key
 % located in the upper left corner of the keyboard. This should remove the word
@@ -387,9 +380,9 @@ get it ready to run. If you get any error messages, go back into \program{gvim}
 and try to figure out what you mis-typed and fix it. Once you have solved the
 problem, make a note of the error and the solution for resolving it. Re-save
 your program and then build it again by re-running the \gradlebuild{}. If you
-cannot build \mainprogram{} correctly, then please talk with a teaching
-assistant or the instructor. Finally, please make sure that you discuss the
-provided source code, including the following fragment.
+cannot build \mainprogram{} correctly, then please talk with a technical leader
+or the instructor. Finally, please make sure that you discuss the provided
+source code, including the following fragment.
 
 \begin{verbatim}
     try {
@@ -410,8 +403,8 @@ not, then repair the program and re-build and re-run it. Once the program runs,
 please reflect on this process. What step did you find to be the most
 challenging? Why? You should write your reflections in a file, called
 \reflection{}, that uses the Markdown writing language. To complete this aspect
-of the assignment, you should write one high-quality paragraph that reports on
-your experiences with the various commands and Java code segments.
+of the assignment, you should write high-quality paragraphs that report on your
+experiences with the commands and Java code segments.
 
 \section*{Checking the Correctness of Your Program and Writing}
 
@@ -455,7 +448,7 @@ transfer to GitHub you would first type \gitcommitmainprogram{} in your
 terminal, followed by typing \gitpush{} and checking to see that the transfer to
 GitHub is successful. If you notice that transferring your code or writing to
 GitHub did not work correctly, then read the errors in your terminal window and
-please try to determine why, asking a teaching assistant or the course
+please try to determine why, asking a technical leader or the course
 instructor for assistance, if necessary.
 
 % To get started with the use of GatorGrader, type the command \gatorgraderstart{}
@@ -531,49 +524,54 @@ assignment:
 
 \section*{Summary of the Required Deliverables}
 
-\noindent Students do not need to submit printed source code or technical writing for any assignment in this course.
-Instead, this assignment invites you to submit, using GitHub, the following deliverables.
+\noindent Students do not need to submit printed source code or technical
+writing for any assignment in this course. Instead, this assignment invites you
+to submit, using GitHub, the following deliverables.
 
 \begin{enumerate}
 
   \setlength{\itemsep}{0in}
 
-\item Stored in \reflection{}, a one-paragraph reflection on the commands that you typed in \command{gvim} and the
-  terminal window. This Markdown-based document should explain the input, output, and behavior of each command and the
-  challenges that you confronted when using it. For every challenge that you encountered, please explain your solution
-  for it.
+\item Stored in \reflection{}, a multiple-paragraph reflection on the commands
+  that you typed in the text editor and the terminal window. This Markdown-based
+  document should explain the input, output, and behavior of each command and
+  the challenges that you confronted when using it. For every challenge that you
+  encountered, please explain your solution for it. You should also provide
+  detailed answers to all the other technical questions.
 
-\item A properly documented, well-formatted, and correct version of \mainprogramsource{} that both meets all of the
-  established requirements and produces the desired output. In particular, please recall that this Java program should
-  read inputs from a file, perform computations, and display the correct outputs in the terminal window.
+\item A properly documented, well-formatted, and correct version of
+  \mainprogramsource{} that both meets all of the established requirements and
+  produces the desired output. In particular, please recall that this Java
+  program should read inputs from a file, perform computations, and display the
+  correct outputs in the terminal window.
 
 \end{enumerate}
 
 \section*{Evaluation of Your Laboratory Assignment}
 
-Using a report that the instructor shares with you through the commit log in GitHub, you will privately received a grade
-on this assignment and feedback on your submitted deliverables. Your grade for the assignment will be a function of the
-whether or not it was submitted in a timely fashion and if your program received a green \checkmark{} indicating that it
-met all of the requirements. Other factors will also influence your final grade on the assignment. In addition to
-studying the efficiency and effectiveness of your Java source code, the instructor will also evaluate the accuracy of
-both your technical writing and the comments in your source code. If your submission receives a red \naughtmark{}, the
-instructor will reduce your grade for the assignment while still considering the regularity with which you committed to
-your GitHub repository and the overall quality of your partially completed work. Please see the instructor if you have
-questions about the evaluation of this laboratory assignment.
-
-% Please note that at the time this assignment was released, the Travis CI servers were not correctly configured for
-% testing and thus you will not immediately be able to observe the \checkmark{} or \naughtmark{} in your commit listing on
-% GitHub. Once this service again becomes available, you will be able to complete this step of the assignment, if you
-% decide to do so. However, you can receive full credit for the assignment as long as your source code and writing pass
-% the local checks run by typing \gatorgradercheck{}. Please see the instructor if you have questions about this issue.
+Using a report that the instructor shares with you through the commit log in
+GitHub, you will privately received a grade on this assignment and feedback on
+your submitted deliverables. Your grade for the assignment will be a function of
+the whether or not it was submitted in a timely fashion and if your program
+received a green \checkmark{} indicating that it met all of the requirements.
+Other factors will also influence your final grade on the assignment. In
+addition to studying the efficiency and effectiveness and documentation of your
+Java source code, the instructor will also evaluate the correctness of your
+technical writing. If your submission receives a red \naughtmark{}, the
+instructor will reduce your grade for the assignment. Finally, please remember
+to read your GitHub repository's \program{README.md} file for a description of
+the four grades that you will receive for this laboratory assignment.
 
 \section*{Adhering to the Honor Code}
 
-In adherence to the Honor Code, students should complete this assignment on an individual basis. While it is appropriate
-for students in this class to have high-level conversations about the assignment, it is necessary to distinguish
-carefully between the student who discusses the principles underlying a problem with others and the student who produces
-assignments that are identical to, or merely variations on, someone else's work. Deliverables (e.g., Java source code or
-Markdown-based technical writing) that are nearly identical to the work of others will be taken as evidence of violating
-the \mbox{Honor Code}. Please see the course instructor if you have questions about this policy.
+In adherence to the Honor Code, students should complete this assignment on an
+individual basis. While it is appropriate for students in this class to have
+high-level conversations about the assignment, it is necessary to distinguish
+carefully between the student who discusses the principles underlying a problem
+with others and the student who produces assignments that are identical to, or
+merely variations on, someone else's work. Deliverables (e.g., Java source code
+or Markdown-based technical writing) that are nearly identical to the work of
+others will be taken as evidence of violating the \mbox{Honor Code}. Please see
+the course instructor if you have questions about this policy.
 
 \end{document}
