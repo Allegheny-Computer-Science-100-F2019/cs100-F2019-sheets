@@ -128,14 +128,20 @@ descriptive commit message"}}
 
 \section*{Objectives}
 
+% You will also continue to practice using Slack to support
+% communication with the teaching assistants and the course instructor.
+
 To continue to practice using GitHub to access the files for a laboratory
-assignment. Additionally, to master the use of the Ubuntu operating system and
-software development programs such as a ``terminal window'' and the ``Docker
-desktop''. You will also continue to practice using Slack to support
-communication with the teaching assistants and the course instructor. Next, you
-will learn how to implement a Java program that reads input values from a file
-and displays output to the user. Finally, you will continue to explore the use
-of variables with different data types.
+assignment. Additionally, to master the use of your laptop's operating system
+and software development programs such as a ``terminal window'' and the ``Docker
+desktop''. Next, you will learn how to implement a Java program that reads a
+graphical image from the file system, performs three graphical transformations
+on the images, and then saves the images on the file system. You will also learn
+more about how the Java language organizes classes into packages and uses
+\command{import} statements.
+%
+Finally, you will continue to explore the use of methods and variables in an
+object-oriented Java program.
 
 \section*{Suggestions for Success}
 
@@ -197,9 +203,11 @@ many of the features that GitHub provides. In particular, please make sure that
 you have read guides such as ``Mastering Markdown'' and ``Documenting Your
 Projects on GitHub''; each of them will help you to understand how to use both
 GitHub and GitHub Classroom. To do well on this assignment, you should also
-review Chapter 1 and study Chapter 2 in the course textbook, paying close
-attention to Sections 2.1 through 2.6, Figure 2.7, and Listing 2.8. See the
-instructor if you have questions these reading assignments.
+review Chapter 1 and study Chapter 2 in the textbook. Next, please read Section
+3.1's content about objects, Section 3.3's content about packages, and Section
+3.11's content about colors in the Java programming language.
+%
+Please see the instructor if you have questions these reading assignments.
 
 \section*{Accessing the Laboratory Assignment on GitHub}
 
@@ -214,7 +222,7 @@ to access your new GitHub repository for this assignment, please click the green
 assignment has been created here''. If you accepted the assignment and correctly
 followed these steps, you should have created a GitHub repository with a name
 like
-``Allegheny-Computer-Science-100-Fall-2019/computer-science-100-fall-2019-lab-3-gkapfham''.
+``Allegheny-Computer-Science-100-Fall-2019/computer-science-100-fall-2019-lab-4-gkapfham''.
 Unless you provide the instructor with documentation of the extenuating
 circumstances that you are facing, not accepting the assignment means that you
 automatically receive a failing grade for it.
@@ -234,7 +242,7 @@ code for this assignment. For instance, if the course instructor ran the
 \command{git clone} command in the terminal, it would look like:
 
 \begin{lstlisting}
-  git clone git@github.com:Allegheny-Computer-Science-100-F2019/computer-science-100-fall-2019-lab-3-gkapfham.git
+  git clone git@github.com:Allegheny-Computer-Science-100-F2019/computer-science-100-fall-2019-lab-4-gkapfham.git
 \end{lstlisting}
 
 After this command finishes, you can use \command{cd} to change into the new
@@ -245,107 +253,29 @@ automatically downloaded from GitHub. What files and directories do you see?
 What do you think is their purpose? Spend some time exploring, sharing your
 discoveries with a neighbor and a \mbox{student technical leader}.
 
-\section*{Reading from a File and Computing with Variables}
+\section*{Performing Graphical Transformations on an Input Image}
 
 Today, you will view and improve another Java program in your text editor! To
 get started, make sure that you can load the Java source code in your text
 editor and find the Markdown-based file in which you will include your technical
 writing. After you have started a terminal window and entered into the provided
 Docker container, build the program and notice that it is not compiling
-correctly! After you have solved this issue, please make sure that you can
+correctly! After you have solved these issues, please make sure that you can
 explain the meaning and purpose of the following Java source code segments. If
 you are not sure how these code segments influence the compilation and execution
 of the program, please talk with the course instructor.
 
-\begin{itemize}
-
-  \item \program{import java.io.FileNotFoundException;}
-  \item \program{import java.util.Scanner;}
-  \item \program{String name = scanner.nextLine();}
-  \item \program{System.out.println(name + ", welcome to the tip calculator.");}
-
-\end{itemize}
-
-\marginnote{\think{Research file input}}[.5in] This assignment invites you to
-implement a Java program that displays exactly ten lines of output. The first
-output line should display your name and then today's date. You can accomplish
-the first task by typing \command{System.out.println("Gregory M. Kapfhammer " +
-new Date());}, substituting your name for the name of the course instructor.
-Your program will produce nine additional lines of output once you add more
-\command{System.out.println} statements. Unlike your previous Java programs,
-this Java program must read input values from a file and then use these inputs
-to perform computations and to produce outputs. Please see the Java source code
-comments for more details! The remainder of this section summarizes the purpose
-of this program for tip calculation.
-
-This assignment asks you to write a Java program, \mainprogramsource{}, that
-will calculate the tip, the total bill for the user, and each person's share of
-the restaurant bill (if there are two or more people). In particular, your
-program needs to do the following:
-
-\vspace*{-.1in}
-\begin{enumerate}
-
-  \item Ask the user to enter a name (remember to save the user's input into a
-    variable so that it can be used later in the program and in the program's
-    output).
-
-  \item Using this name, display a friendly and appropriate welcome message to
-    the user.
-
-  \item Ask the user to enter the restaurant's bill amount (remember to save the
-    user's input into an appropriate variable). You should allow for floating
-    point (e.g., decimal or fractional) values.
-
-  \item Ask the user to enter the desired tip percentage as a number between $0$
-    and $100$ or as a decimal number between $0$ and $1$. You have to decide
-    which range you want to use for your program and specify it when prompting
-    for the user's input (after picking the correct data type for the
-    percentage, remember to save the user's input into an appropriate variable).
-
-  \item Calculate the tip as $tip = \frac{percentage}{100} \times bill$ if the
-    percentage ranges between $0$ and $100$ or as $tip = percentage \times bill$
-    if the percentage ranges between $0$ and $1$.
-
-  \item Calculate the total bill as $total\_bill = bill+tip$
-
-  \item Display to the user:
-    \begin{itemize}
-      \item The original bill (before the tip)
-      \item The tip amount
-      \item The total bill (including the tip)
-    \end{itemize}
-
-  \item Ask the user how many people will be splitting the total bill (remember
-    to save the user's input into a variable so that it can be used later in the
-    program and in the program's output).
-
-  \item Calculate each person's share. For example, if you saved the number of
-    people splitting the bill into a variable called {\em num\_people}, then you
-    would calculate each person's share as $share =
-    \frac{total\_bill}{num\_people}$. You should think (or rethink) your views
-    concerning the data types you are using and whether a data conversion is
-    required at this point in your program.
-
-  \item Display to the user an exit message that is suitable for an academic
-    setting.
-
-\end{enumerate}
-
-\noindent If a step says to ``ask the user'' this means the program should read
-from a file. A sample run is:
-
 \begin{verbatim}
-  Gregory M. Kapfhammer Tue Sep 24 10:39:17 EDT 2019
-  Timothy, welcome to the tip calculator.
-  The amount of your bill is: $50.0
-  The percentage you want to tip is: 15.0%
-  Alright, that means your total tip will be: $7.5
-  Timothy, your total bill is: $57.5
-  Okay, I see that there are 2 people in your group.
-  So, that means each person must pay: $28.75
-  Thanks for using the tip calculator.
-  Have an awesome day.
+  Gregory M. Kapfhammer Tue Oct 01 13:12:30 EDT 2019
+  Starting to convert to grey-scale ...
+  Saved images/source_converted_greyscale.png
+  ... Finished converting to grey-scale!
+  Starting to convert to brighter, saturated image ...
+  Saved images/source_converted_brighten.png
+  ... Finished converting to brighter, saturated image!
+  Starting to convert to darker, subdued image ...
+  Saved images/source_converted_darken.png
+  ... Finished converting to darker, subdued image!
 \end{verbatim}
 
 With the exception of the name and date on which the program was run, your
@@ -374,17 +304,7 @@ problem, make a note of the error and the solution for resolving it. Re-save
 your program and then build it again by re-running the \gradlebuild{}. If you
 cannot build \mainprogram{} correctly, then please talk with a technical leader
 or the instructor. When you are coding don't forget to add comments explaining
-the meaning and purpose of each line. Finally, make sure that you discuss the
-provided source code, including the following fragment.
-
-\begin{verbatim}
-    try {
-      tipInputsFile = new File("input/tip_inputs.txt");
-      scanner = new Scanner(tipInputsFile);
-    } catch (FileNotFoundException noFile) {
-      System.out.println("Unable to locate file");
-    }
-\end{verbatim}
+the meaning and purpose of each line.
 
 \marginnote{\think{Reflect on challenges}}[.7in] When all program errors are
 eliminated, you can run your program by typing \gradlerun{} in the
@@ -467,30 +387,29 @@ assignment:
 \begin{enumerate}
   \setlength{\itemsep}{0pt}
 
-\item The provided source code uses the {\tt Scanner} class; notice that it is
-  imported at the top of the program. You may refer to the textbook for code
-  demonstrating the use of the {\tt Scanner}; you need to use methods that
-  support the input for variables of type {\tt String}, {\tt int}, and {\tt
-  double}. Picking the wrong data types for your variables may cause the program
-  to crash or to produce incorrect output. See the course instructor if you are
-  not sure what data types to use.
+\item Your program will not compile correctly unless you add the correct
+  \program{import} statements to the top of the \mainprogramsource{} file. For
+  instance, here is one block of inputs that you need to ensure are available so
+  that the program compiles:
 
-\item Students who want to learn more about how to use the {\tt
-  java.util.Scanner} class can refer to Section 2.6 of the textbook, focusing on
-  the {\tt GasMileage} program discussed in class and provided in Listing 2.9.
-  Make sure that you know how to construct and use a {\tt Scanner}.
-
-\item You should think carefully about what data type you want to use for your
-  variables.
+  \vspace*{-.05in}
+  \begin{verbatim}
+    import java.awt.color.ColorSpace;
+    import java.awt.image.BufferedImage;
+    import java.awt.image.BufferedImageOp;
+    import java.awt.image.ColorConvertOp;
+  \end{verbatim}
+  \vspace*{-.2in}
 
 \item As in past assignments, your program only needs to have one {\tt main}
-  method.
-
-\item To display a dollar sign, you can just type ``\$'' inside the string of
-  your output statement.
+  method. However, the final version of your program will also have three
+  additional methods that can transform a graphical image, like the method
+  \program{convertImageToGreyScale(BufferedImage sourceImage)}.
 
 \item Note that your program will alternate between printing and
-  computing---this is okay!
+  computing---this is okay! Specifically, the program's \program{main} method
+  will have a \program{try-catch} block in it that reads in an image and then
+  converts and saves it, producing suitable diagnostic messages as needed.
 
 \item Don't forget to review the assignment sheets from the previous laboratory
   and practical assignments as they contain insights that will support your
@@ -515,11 +434,12 @@ to submit, using GitHub, the following deliverables.
   encountered, please explain your solution for it. You should also provide
   detailed answers to all the other technical questions.
 
-\item A properly documented, well-formatted, and correct version of
-  \mainprogramsource{} that both meets all of the established requirements and
-  produces the desired output. In particular, please recall that this Java
-  program should read inputs from a file, perform computations, and display the
-  correct outputs in the terminal window.
+\item A completed version of \mainprogramsource{} that both meets all of the
+  established requirements and produces the desired output. In particular,
+  please recall that this Java program should read a graphical image from the
+  file system, perform three image transformations, save three images on the
+  file system, and display the correct outputs in the terminal window, producing
+  ten total lines of output.
 
 \end{enumerate}
 
