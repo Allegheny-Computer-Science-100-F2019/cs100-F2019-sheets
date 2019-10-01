@@ -17,7 +17,7 @@
 
 % Edit these commands to give the name to the main program
 
-\newcommand{\mainprogram}{\lstinline{ConvertGraphicImage}}
+\newcommand{\mainprogram}{\lstinline{ConvertGraphicImage.java}}
 \newcommand{\mainprogramsource}{\lstinline{src/main/java/labfour/ConvertGraphicImage.java}}
 \newcommand{\mainprograminput}{\lstinline{input/tip_inputs.txt}}
 
@@ -261,9 +261,12 @@ editor and find the Markdown-based file in which you will include your technical
 writing. After you have started a terminal window and entered into the provided
 Docker container, build the program and notice that it is not compiling
 correctly! After you have solved these issues, please make sure that you can
-explain the meaning and purpose of the following Java source code segments. If
-you are not sure how these code segments influence the compilation and execution
-of the program, please talk with the course instructor.
+explain the meaning and purpose of the Java \command{import} statements. If you
+are not sure how these code segments influence the compilation and execution of
+the program, please talk with the course instructor. Ultimately, your program
+should produce the following ten lines of output, revealing that it correctly
+performed an image conversion in three different fashions: grey-scale, saturate,
+and de-saturate.
 
 \begin{verbatim}
   Gregory M. Kapfhammer Tue Oct 01 13:12:30 EDT 2019
@@ -278,15 +281,22 @@ of the program, please talk with the course instructor.
   ... Finished converting to darker, subdued image!
 \end{verbatim}
 
-With the exception of the name and date on which the program was run, your
-\mainprogramsource{} should produce the same output as seen in the above
-example. Additionally, you should try to edit the \mainprograminput{} file so
-that it provides different inputs to the program. Does your \mainprogram{} still
-produce the expected output? Remember, you need to run the program inside of a
-Docker container, using a command like the following one. Don't forget that you
-may have to adjust this command for your specific operating system and terminal
-window, consulting the instructor if you need assistance with the use of Docker
-desktop.
+\marginnote{\caution{Add missing source code}}[.6in] With the exception of the
+name and date on which the program was run, your \mainprogramsource{} should
+produce the same output as seen in the above example. Does your \mainprogram{}
+produce the expected output?
+%
+Please notice that the provided source code has many \command{TODO} markers
+inside of it. You should carefully read each of these markers and try to
+complete the specified task. For instance, you will need to add the correct
+\command{import} statements, complete the implementation of two Java methods,
+ensure that Java methods are correctly called from the \program{main} method,
+and add new \command{println} statements.
+%
+Remember, you need to run the program inside of a Docker container, using a
+command like the following one. Don't forget that you may have to adjust this
+command for your specific operating system and terminal window, consulting the
+instructor if you need assistance with the use of Docker desktop.
 
 \begin{verbatim}
 docker run -it --rm --name dockagator \
@@ -295,16 +305,18 @@ docker run -it --rm --name dockagator \
   gatoreducator/dockagator /bin/bash
 \end{verbatim}
 
-\marginnote{\discuss{Discuss input code}}[.35in] Remember, if you want to
-\step{build} your program you can type the command \gradlebuild{} in your
-terminal, thereby causing the Java compiler to check your program for errors and
-get it ready to run. If you get any error messages, go back into the text editor
-and try to figure out what you mis-typed and fix it. Once you have solved the
+\marginnote{\caution{Produce graphical images}}[.6in] If you want to \step{build}
+your program you can type the command \gradlebuild{} in your Docker container,
+thereby causing the Java compiler to check your program for errors and get it
+ready to run. If you get any error messages, go back into the text editor and
+try to figure out what you mis-typed and fix it. Once you have solved the
 problem, make a note of the error and the solution for resolving it. Re-save
 your program and then build it again by re-running the \gradlebuild{}. If you
 cannot build \mainprogram{} correctly, then please talk with a technical leader
-or the instructor. When you are coding don't forget to add comments explaining
-the meaning and purpose of each line.
+or the instructor. When you are coding don't forget to remove the \command{TODO}
+markers and add comments explaining the meaning and purpose of each line. After
+you have completed the program, please make sure that it produces three new
+graphical images in the \command{images} directory of your repository.
 
 \marginnote{\think{Reflect on challenges}}[.7in] When all program errors are
 eliminated, you can run your program by typing \gradlerun{} in the
@@ -329,12 +341,11 @@ contains your reflection must adhere to the standards described in the Markdown
 Syntax Guide \url{https://guides.github.com/features/mastering-markdown/}.
 Finally, your \reflection{} file should adhere to the Markdown standards
 established by the \step{Markdown linting} tool available at
-\url{https://github.com/markdownlint/markdownlint/} and the writing standards
-set by the \step{prose linting} tool from \url{http://proselint.com/}. Instead
-of requiring you to manually check that your deliverables adhere to these
-industry-accepted standards, the GatorGrader and Gradle tools that you will use
-in this laboratory assignment makes it easy for you to automatically check if
-your submission meets the standards for correctness.
+\url{https://github.com/markdownlint/markdownlint/}. Instead of requiring you to
+manually check that your deliverables adhere to these industry-accepted
+standards, the GatorGrader and Gradle tools that you will use in this assignment
+makes it easy for you to check if your submission meets the correctness
+standards.
 
 Since this is not your first laboratory assignment, you will notice that the
 provided source code does not contain all of the required imports at the top of
@@ -344,8 +355,8 @@ the imports in the \mainprogramsource{} file. Moreover, the provided source code
 is missing many of the lines that are needed to pass the GatorGrader checks! For
 instance, GatorGrader will check to ensure that the \mainprogram{} produces
 exactly ten lines of output, that you use the \command{new Date()} construct in
-the Java source code, and that the program correctly produces the same output as
-seen on the previous page.
+the source code, and that the program correctly produces the same output as seen
+on the previous page.
 
 \marginnote{\caution{Write useful commits}}[.75in] To get started with the use
 of GatorGrader, type the command \gatorgraderstart{} in your Docker container.
@@ -392,28 +403,29 @@ assignment:
   instance, here is one block of inputs that you need to ensure are available so
   that the program compiles:
 
-  \vspace*{-.05in}
+  \vspace*{-.1in}
   \begin{verbatim}
     import java.awt.color.ColorSpace;
     import java.awt.image.BufferedImage;
     import java.awt.image.BufferedImageOp;
     import java.awt.image.ColorConvertOp;
   \end{verbatim}
-  \vspace*{-.2in}
+  \vspace*{-.25in}
 
 \item As in past assignments, your program only needs to have one {\tt main}
   method. However, the final version of your program will also have three
   additional methods that can transform a graphical image, like the method
   \program{convertImageToGreyScale(BufferedImage sourceImage)}.
 
-\item Note that your program will alternate between printing and
-  computing---this is okay! Specifically, the program's \program{main} method
+\item Note that your program will alternate between printing and computing, as
+  in previous assignments. Specifically, the program's \program{main} method
   will have a \program{try-catch} block in it that reads in an image and then
   converts and saves it, producing suitable diagnostic messages as needed.
 
 \item Don't forget to review the assignment sheets from the previous laboratory
   and practical assignments as they contain insights that will support your
-  completion of this assignment.
+  completion of this assignment. For instance, you should review how to use
+  \command{println} statements to produce program output.
 
 \end{enumerate}
 
@@ -435,11 +447,11 @@ to submit, using GitHub, the following deliverables.
   detailed answers to all the other technical questions.
 
 \item A completed version of \mainprogramsource{} that both meets all of the
-  established requirements and produces the desired output. In particular,
-  please recall that this Java program should read a graphical image from the
-  file system, perform three image transformations, save three images on the
-  file system, and display the correct outputs in the terminal window, producing
-  ten total lines of output.
+  established requirements and produces the desired graphical and textual
+  output. In particular, please recall that this Java program should read a
+  graphical image from the file system, perform three image transformations,
+  save three images on the file system, and display the correct outputs in the
+  terminal window, producing ten total lines of output.
 
 \end{enumerate}
 
@@ -458,7 +470,7 @@ instructor will reduce your grade for the assignment. Finally, please remember
 to read your GitHub repository's \program{README.md} file for a description of
 the four grades that you will receive for this laboratory assignment.
 
-\section*{Adhering to the Honor Code}
+% \section*{Adhering to the Honor Code}
 
 In adherence to the Honor Code, students should complete this assignment on an
 individual basis. While it is appropriate for students in this class to have
