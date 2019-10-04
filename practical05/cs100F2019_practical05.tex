@@ -228,6 +228,18 @@ and fix any mistakes in your source code.
     }
 \end{verbatim}
 
+One potential source of difficulty for this assignment is the behavior of the
+\command{replace} method provided by the \program{java.lang.String} class. If
+the input sentence is stored in a variable called \command{sentence}, then it is
+important to note that the method call \command{sentence.replace("Allegheny",
+"GGGGGGGGG")} returns a new string in which the word \command{Allegheny} is
+``redacted'' by replacing it with the new word \command{GGGGGGGGG}. This
+realization suggests that a correct redaction method requires code like:
+
+\begin{verbatim}
+  String redactedSentence = sentence.replace("Allegheny", "GGGGGGGGG");
+\end{verbatim}
+
 \begin{figure}[tb]
 \begin{Verbatim}[commandchars=\\\{\}]
   Gregory M. Kapfhammer Fri Oct 04 08:03:13 EDT 2019
