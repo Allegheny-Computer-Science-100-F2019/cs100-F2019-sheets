@@ -234,7 +234,7 @@ the input sentence is stored in a variable called \command{sentence}, then it is
 important to note that the method call \command{sentence.replace("Allegheny",
 "GGGGGGGGG")} returns a new string in which the word \command{Allegheny} is
 ``redacted'' by replacing it with the new word \command{GGGGGGGGG}. This
-realization suggests that a correct redaction method requires code like:
+realization suggests that a correct redaction program requires code like:
 
 \begin{verbatim}
   String redactedSentence = sentence.replace("Allegheny", "GGGGGGGGG");
@@ -286,20 +286,23 @@ course instructor for help, if necessary.
 
 After the course instructor enables \step{continuous integration} with a system
 called Travis CI, when you use the \gitpush{} command to transfer your source
-code to your GitHub repository, Travis CI will initialize a \step{build} of
-your assignment, checking to see if it meets all of the requirements. If both
-your source code and writing meet all of the established requirements, then you
-will see a green \checkmark{} in the listing of commits in GitHub after awhile.
-If your submission does not meet the requirements, a red \naughtmark{} will
-appear instead. The instructor will reduce a student's grade for this
-assignment if the red \naughtmark{} appears on the last commit in GitHub
-immediately before the assignment's due date. Yet, if the green \checkmark{}
-appears on the last commit in your GitHub repository, then you satisfied all of
-the main checks. Unless you provide the course instructor with documentation of
-the extenuating circumstances that you are facing, no late work will be
-considered towards your completion grade for this practical assignment. You
-should aim to finish practical assignments on the day that they are assigned,
-finishing them by the start of the next classroom session.
+code to your GitHub repository, Travis CI will initialize a \step{build} of your
+assignment, checking to see if it meets all of the requirements. If both your
+source code and writing meet all of the established requirements, then you will
+see a green \checkmark{} in the listing of commits in GitHub after awhile. If
+your submission does not meet the requirements, a red \naughtmark{} will appear
+instead. The instructor will reduce a student's grade for this assignment if the
+red \naughtmark{} appears on the last commit in GitHub immediately before the
+assignment's due date. Yet, if the green \checkmark{} appears on the last commit
+in your GitHub repository, then you satisfied all of the main checks. Unless you
+provide the course instructor with documentation of the extenuating
+circumstances that you are facing, no late work will be considered towards your
+completion grade for this practical assignment. You should aim to finish
+practical assignments on the day that they are assigned, completing them no
+later than the start of the next classroom session.
+%
+Please see the course instructor with questions about this assignment submission
+policy.
 
 % Give additional suggestions for improvement, adding to the first list
 
