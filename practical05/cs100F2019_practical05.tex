@@ -18,8 +18,8 @@
 
 % Edit these commands to give the name to the main program
 
-\newcommand{\mainprogram}{\lstinline{MadLibs}}
-\newcommand{\mainprogramsource}{\lstinline{src/main/java/practicalfour/MadLibs.java}}
+\newcommand{\mainprogram}{\lstinline{PerformRedaction}}
+\newcommand{\mainprogramsource}{\lstinline{src/main/java/practicalfour/PerformRedaction.java}}
 
 % Edit this commands to describe key deliverables
 
@@ -47,7 +47,7 @@
 \newcommand{\gitpush}{\command{git push}}
 \newcommand{\gitpull}{\command{git pull}}
 
-\newcommand{\gitcommitmainprogram}{\command{git commit src/main/java/practicalfour/MadLibs.java -m "Your
+\newcommand{\gitcommitmainprogram}{\command{git commit src/main/java/practicalfour/PerformRedaction.java -m "Your
 descriptive commit message"}}
 
 % Use this when displaying a new command
@@ -113,13 +113,13 @@ descriptive commit message"}}
 
 To continue practicing the use of GitHub to access the files for a practical
 assignment. Additionally, to practice using your laptop's operating system and
-software development programs such as Docker Desktop and a terminal window. You
-will continue to practice using Slack to support communication with the teaching
-assistants and the course instructor. Next, you will learn more about file input
-and output, further discovering how the course's automated grading tool assesses
-your progress towards correctly completing the project. Finally, you will learn
-more about how to perform string replacement in a program that ``redacts'' text
-from the input file.
+software development programs such as Docker Desktop, a terminal window, and a
+text editor. You will continue to practice using Slack to support communication
+with the teaching assistants and the course instructor. Next, you will learn
+more about file input and output, further discovering how the course's automated
+grading tool assesses your progress towards correctly completing the project.
+Finally, you will learn more about how to use string replacement in a Java
+program to ``redact'' text from the input file.
 
 \section*{Suggestions for Success}
 
@@ -181,10 +181,11 @@ many of the features that GitHub provides. In particular, please make sure that
 you have read guides such as ``Mastering Markdown'' and ``Documenting Your
 Projects on GitHub''; each of them will help you to understand how to use both
 GitHub and GitHub Classroom. Focusing on the content about declaring and
-variables and reading from files, you should review Chapters 1 and 2 and
-Sections 3.1 and 3.2 in the textbook.
+variables and reading from files, you should review Chapters 1 through 3 and
+textbook, paying close attention to the technical content about string
+manipulation through the use of methods like \command{replace}.
 
-\section*{Implementing a ``Mad Libs'' Program}
+\section*{Performing Text Redaction Through String Manipulation}
 
 To access the practical assignment, you should go into the
 \channel{\#announcements} channel in our Slack team and find the announcement
@@ -256,29 +257,19 @@ this practical assignment, make sure that you can answer these questions:
 
 \begin{figure}[tb]
 \begin{Verbatim}[commandchars=\\\{\}]
-Gregory M. Kapfhammer Fri Sep 27 12:01:06 EDT 2019
+  Gregory M. Kapfhammer Fri Oct 04 08:03:13 EDT 2019
 
-I read a singular noun: \textcolor{red}{noggin}
-I read an adjective: \textcolor{red}{verboten}
-I read another adjective: \textcolor{red}{glitzy}
-I read a non-zero whole number: \textcolor{red}{32}
-I read another non-zero whole number: \textcolor{red}{42}
-I read any number: \textcolor{red}{5.43}
-I read a singular verb: \textcolor{red}{snooze}
+  Performing redaction on the following sentence:
+  I am a student enrolled in Computer Science 100 at Allegheny College.
 
-Word Problem
+  Redaction created the following sentence:
+  I am a student enrolled in Computer Science 100 at GGGGGGGGG College.
 
-If you own 32 verboten noggins,
-and you purchase 42 glitzy noggins,
-how many more noggins do you need to snooze 5.43 noggins?
-
-Answer: You need 228.06 more noggins.
-
-Thanks for using the MadLibs program.
-Have an awesome day.
+  Thanks for using the redaction program.
+  Have an awesome day.
 \end{Verbatim}
 \vspace*{-.1in}
-\caption{Sample ``Mad Libs'' output with values from file input highlighted in red.}
+\caption{Sample Output from Running \mainprogram.}
 \label{mad}
 \end{figure}
 
