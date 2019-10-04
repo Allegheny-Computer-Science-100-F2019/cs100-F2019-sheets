@@ -206,54 +206,27 @@ previous laboratory assignments for finding your ``home base'' for this
 practical assignment; see the instructor if you are stuck on getting started.
 
 Figure~\ref{mad} contains the output from running a program like the one you
-must implement. To gain some inspiration and to learn more about Mad Libs and
-how your program should behave, please visit the site
-\url{http://www.madlibs.com/}. After finishing the \mainprogramsource{} file,
-you should repeatedly test your program to make sure that it is creating the
-correct textual output. This will involve you editing the input file so that it
-contains {\em some} different words and numbers in it and then running your
-program to determine if it correctly displays the story. As you are working on
-this practical assignment, make sure that you can answer these questions:
+must implement. To ensure that the program produces the correct output, you
+should follow the instructions at all of the \command{TODO} markers, adding the
+needed source code. As you are working on this practical assignment, make sure
+that you study the following source code segment and understand how it writes
+the \command{redactedSentence} variable to the output file. If your program
+works correctly, then you should see that it produces the file
+\program{content/sentence\_output.txt}. If you program does not produce this
+file or the file does not have the correct contents, then make sure that you
+talk with the course instructor or a student technical leader to identify any
+mistakes in your source code.
 
-\begin{enumerate}
-  \setlength{\itemsep}{2pt}
-
-  \item What is the symbol used to indicate the termination of a line of Java source
-    code?
-
-  \item What are the capitalization conventions to which methods and
-    variables must adhere?
-
-  \item How do you declare, initialize, and use variables of Java's primitive
-    data types?
-
-  \item What are the similarities and differences between the \program{String} and
-    {\tt int} data types?
-
-  \item What are the similarities and differences between the \program{double}
-    and {\tt int} data types?
-
-  \item What type of method do you call if you want a Java program to produce
-    console output?
-
-  \item What are the similarities and differences between the \program{print}
-    and \program{println} methods?
-
-  \item What are single-line comments and how do you include them in a
-    Java program?
-
-  \item What are JavaDoc multiple-line comments and how do you include them in a
-    Java program?
-
-  \item What is the purpose of the \command{import} statement(s) appearing at
-    the top of a Java program?
-
-  \item What is the motivation behind using a \command{try-catch} block in a Java program?
-
-  \item Why does it sometimes seem like the {\tt java.util.Scanner} ``skips''
-    one of the input values?
-
-\end{enumerate}
+\begin{verbatim}
+    try {
+      PrintWriter out = new PrintWriter("content/sentence_output.txt");
+      out.println(redactedSentence);
+      out.flush();
+      out.close();
+    } catch (FileNotFoundException noFile) {
+      System.out.println("Unable to locate the input file");
+    }
+\end{verbatim}
 
 \begin{figure}[tb]
 \begin{Verbatim}[commandchars=\\\{\}]
