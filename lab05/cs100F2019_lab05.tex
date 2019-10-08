@@ -265,7 +265,7 @@ program, called {\tt WordHide.java}, that will perform these operations:
     all of the characters after the tenth one (you may also implement better
     strategies).
 
-  \item Since the {\tt WordHide} program must output all of its character in a
+  \item Since the {\tt WordHide} program must output all of its characters in a
     capitalized form, you should transform the word provided by the user so that
     it only contains upper-case letters.
 
@@ -309,30 +309,23 @@ requirements:
   and spaces).
 \item Strategically hide the word in a fashion that is difficult for a human
   to detect.
-\item Run correctly without crashing or producing an error
+\item Run in a correct and robust fashion without crashing or producing an error.
 
 \end{enumerate}
 \vspace*{-.1in}
 
-% Whenever you are finished typing text Java code in \program{gvim}, press the ESC
-% key located in the upper left corner of the keyboard. This should remove the
-% word \command{--INSERT--} from the bottom of the screen and take you out of
-% insert mode. Use the \option{File/Save} menu to save your program.
-% Alternatively, if you would like to use the keyboard to save your file, you can
-% press \command{:w} when you are not in insert mode. Leaving the {\tt gvim}
-% window open, go back to your terminal window.
-
 If you want to \step{build} your program you can type the command \gradlebuild{}
-in your terminal, thereby causing the Java compiler to check your program for
-errors and get it ready to run. If you get any error messages, go back into
-\program{gvim} and try to figure out what you mis-typed and fix it. Once you
-have solved the problem, make a note of the error and the solution for resolving
-it. Re-save your program and then build it again by re-running the
-\gradlebuild{}. If you cannot build \mainprogram{} correctly, then please talk
-with a teaching assistant or the instructor. Before you go on to the next step
-of the assignment you should also ensure that you understand how \mainprogram{}
-uses the following source code segment to support the reading of values from an
-input file.
+in your Docker container, thereby causing the Java compiler to check your
+program for errors and get it ready to run. If you get any error messages, go
+back into a text editor like Atom and try to figure out what you mis-typed and
+fix it. Once you have solved the problem, make a note of the error and the
+solution for resolving it. Re-save your program and then build it again by
+re-running the \gradlebuild{}. If you cannot build \mainprogram{} correctly,
+then please talk with a technical leader or the instructor. Before you go on to
+the next step of the assignment you should also ensure that you understand how
+\mainprogram{} could use the following source code segment to support the
+reading of values from an input file. Why is exception handling needed for this
+program to perform input?
 
 \vspace*{-.1in}
 \begin{verbatim}
