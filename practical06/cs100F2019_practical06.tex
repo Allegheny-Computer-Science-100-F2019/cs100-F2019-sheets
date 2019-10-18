@@ -9,7 +9,7 @@
 \newcommand{\assignmentnumber}{Six}
 
 \newcommand{\labyear}{2019}
-\newcommand{\labdueday}{Wednesday}
+\newcommand{\labdueday}{Monday}
 \newcommand{\labassignday}{Friday}
 \newcommand{\labtime}{1:30 pm}
 
@@ -19,10 +19,10 @@
 % Edit these commands to give the name to the main program
 
 \newcommand{\mainprogram}{\lstinline{RollAndSumDice}}
-\newcommand{\mainprogramsource}{\lstinline{src/main/java/practicalfive/RollAndSumDice.java}}
+\newcommand{\mainprogramsource}{\lstinline{src/main/java/practicalsix/RollAndSumDice.java}}
 
 \newcommand{\secondprogram}{\lstinline{Die}}
-\newcommand{\secondprogramsource}{\lstinline{src/main/java/practicalfive/Die.java}}
+\newcommand{\secondprogramsource}{\lstinline{src/main/java/practicalsix/Die.java}}
 
 % Commands to describe key development tasks
 
@@ -46,7 +46,7 @@
 \newcommand{\gitpush}{\command{git push}}
 \newcommand{\gitpull}{\command{git pull}}
 
-\newcommand{\gitcommitmainprogram}{\command{git commit src/main/java/practicalfive/RollAndSumDice.java -m "Your
+\newcommand{\gitcommitmainprogram}{\command{git commit src/main/java/practicalsix/RollAndSumDice.java -m "Your
 descriptive commit message"}}
 
 % Use this when displaying a new command
@@ -112,33 +112,24 @@ descriptive commit message"}}
 
 To continue practicing the use of GitHub to access the files for a practical
 assignment. Additionally, to practice using the Ubuntu operating system and
-software development programs such as a ``terminal window'' and the ``GVim text
-editor''. You will continue to practice using Slack to support communication
+software development programs such as a ``terminal window'' and the ``Docker
+container''. You will continue to practice using Slack to support communication
 with the teaching assistants and the course instructor. Next, you will learn
 more about random number generation and the use of {\tt java.util.Random},
 further discovering how the course's automated grading tool assesses your
-progress towards correctly completing the project. Finally, you will continue to
-learn more about creating and using Java classes and objects.
+progress towards correctly completing the project. Finally, you will continue
+to learn more about creating and using Java classes and objects.
 
 \section*{Suggestions for Success}
 
 \begin{itemize}
   \setlength{\itemsep}{0pt}
 
-\item {\bf Use the laboratory computers}. The computers in this laboratory
-  feature specialized software for completing this course's Laboratory and
-  practical assignments. If it is necessary for you to work on a different
-  machine, be sure to regularly transfer your work to a laboratory machine so
-  that you can check its correctness. If you cannot use a laboratory computer
-  and you need help with the configuration of your own laptop, then please
-  carefully explain its setup to a teaching assistant or the course instructor
-  when you are asking questions.
-
 \item {\bf Follow each step carefully}. Slowly read each sentence in the
-  assignment sheet, making sure that you precisely follow each instruction. Take
-  notes about each step that you attempt, recording your questions and ideas and
-  the challenges that you faced. If you are stuck, then please tell a teaching
-  assistant or instructor what assignment step you recently completed.
+  assignment sheet, making sure that you precisely follow each instruction.
+  Take notes about each step that you attempt, recording your questions and
+  ideas and the challenges that you faced. If you are stuck, then please tell a
+  teaching assistant or instructor what assignment step you recently completed.
 
 \item {\bf Regularly ask and answer questions}. Please log into Slack at the
   start of a laboratory or practical session and then join the appropriate
@@ -150,30 +141,22 @@ learn more about creating and using Java classes and objects.
   will be responsible for storing all of your files (e.g., Java source code and
   Markdown-based writing) in a Git repository using GitHub Classroom. Please
   verify that you have saved your source code in your Git repository by using
-  \command{git status} to ensure that everything is updated. You can see if your
-  assignment submission meets the established correctness requirements by using
-  the provided checking tools on your local computer and in checking the commits
-  in GitHub.
+  \command{git status} to ensure that everything is updated. You can see if
+  your assignment submission meets the established correctness requirements by
+  using the provided checking tools on your local computer and in checking the
+  commits in GitHub.
 
 \item {\bf Keep all of your files}. Don't delete your programs, output files,
   and written reports after you submit them through GitHub; you will need them
   again when you study for the quizzes and examinations and work on the other
   laboratory, practical, and final project assignments.
 
-\item {\bf Back up your files regularly}. All of your files are regularly
-  backed-up to the servers in the Department of Computer Science and, if you
-  commit your files regularly, stored on GitHub. However, you may want to use a
-  flash drive, Google Drive, or your favorite backup method to keep an extra
-  copy of your files on reserve. In the event of any type of system failure, you
-  are responsible for ensuring that you have access to a recent backup copy of
-  all your files.
-
 \item {\bf Explore teamwork and technologies}. While certain aspects of these
   assignments will be challenging for you, each part is designed to give you the
   opportunity to learn both fundamental concepts in the field of computer
   science and explore advanced technologies that are commonly employed at a wide
   variety of companies. To explore and develop new ideas, you should regularly
-  communicate with your team and/or the teaching assistants and tutors.
+  communicate with your team and/or the student technical leaders.
 
 \item {\bf Hone your technical writing skills}. Computer science assignments
   require to you write technical documentation and descriptions of your
@@ -363,17 +346,18 @@ If your GitHub repository has a \checkmark{} for the last commit before the
 deadline then you will receive the highest possible grade for the assignment.
 However, you will fail the assignment if you do not complete it correctly, as
 evidenced by a red \naughtmark{} in your commit listing, by the set deadline for
-completing the project. Please see the course instructor if you do not
-understand how practical assignments are graded or you do not know how to
-complete one of the specific tasks in this assignment.
+finishing the project.
 
 \section*{Adhering to the Honor Code}
 
-In adherence to the Honor Code, students should complete this practical assignment on an individual basis. While it is
-appropriate for students in this class to have high-level conversations about the assignment, it is necessary to
-distinguish carefully between the student who discusses the principles underlying a problem with others and the student
-who produces assignments that are identical to, or merely variations on, someone else's work. Deliverables (e.g., the
-Java source code) that are nearly identical to the work of others will be taken as evidence of violating the \mbox{Honor
-Code}. Please see the course instructor if you have questions about this policy.
+In adherence to the Honor Code, students should complete this practical
+assignment on an individual basis. While it is appropriate for students in this
+class to have high-level conversations about the assignment, it is necessary to
+distinguish carefully between the student who discusses the principles
+underlying a problem with others and the student who produces assignments that
+are identical to, or merely variations on, someone else's work. Deliverables
+(e.g., the Java source code) that are nearly identical to the work of others
+will be taken as evidence of violating the \mbox{Honor Code}. Please see the
+course instructor if you have questions about this policy.
 
 \end{document}
