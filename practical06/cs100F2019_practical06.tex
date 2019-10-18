@@ -114,11 +114,11 @@ To continue practicing the use of GitHub to access the files for a practical
 assignment. Additionally, to practice using the Ubuntu operating system and
 software development programs such as a ``terminal window'' and the ``Docker
 container''. You will continue to practice using Slack to support communication
-with the teaching assistants and the course instructor. Next, you will learn
-more about random number generation and the use of {\tt java.util.Random},
-further discovering how the course's automated grading tool assesses your
-progress towards correctly completing the project. Finally, you will continue
-to learn more about creating and using Java classes and objects.
+with the technical leaders and the course instructor. Next, you will learn more
+about random number generation and the use of {\tt java.util.Random}, further
+discovering how the course's automated grading tool assesses your progress
+towards correctly completing the project. Finally, you will continue to learn
+more about creating and using Java classes and objects.
 
 \section*{Suggestions for Success}
 
@@ -203,9 +203,9 @@ automatically receive a failing grade for it. Please follow the steps from the
 previous laboratory assignments for finding your ``home base'' for this
 practical assignment; see the instructor if you are stuck on getting started.
 
-Figure~\ref{mad} contains the output from running a program like the one you
-must implement. You should study the comments in the \mainprogramsource{} to see
-each step that you have to implement. Specifically, your program must create
+Figure~\ref{fig:roll} contains the output from running a program like the one
+you must implement. You should study the comments in the \mainprogramsource{} to
+see each step that you have to implement. Specifically, your program must create
 three instances of the \command{Die} class, display the face value of each one
 of these instances, sum these face values together, and then output the sum.
 After finishing the \mainprogramsource{} file, you should repeatedly test you
@@ -220,15 +220,45 @@ between the two Java source code files.
 
 \begin{figure}[tb]
 \begin{Verbatim}[commandchars=\\\{\}]
-Die One's Face Value: 1
-Die Two's Face Value: 5
-Die Three's Face Value: 6
-The Sum of the Three Die is: 12
+  Die One's Face Value: 1
+  Die Two's Face Value: 5
+  Die Three's Face Value: 6
+  The Sum of the Three Die is: 12
 \end{Verbatim}
 \vspace*{-.1in}
-\caption{Sample ``{\tt RollAndSumDice}'' output featuring randomly generated values.}
-\label{mad}
+\caption{Sample ``{\tt RollAndSumDice}'' output featuring randomly generated
+values.}~\label{fig:roll}
+\vspace*{-.25in}
 \end{figure}
+
+As you are completing this assignment, make sure that you understand how the
+following Java source code statements complete the described action and lead to
+output like that in Figure~\ref{fig:roll}.
+
+\begin{itemize}
+
+  \item \program{Die die1;} --- declare an instance of the \program{Die} class.
+
+  \item \program{die1 = new Die();} --- construct a new instance of the \program{Die} class.
+
+  \item \program{die1.roll();} --- call the \program{roll()} method on the
+    instance of \program{Die}.
+
+  \item \program{die1.roll();} --- call the \program{roll()} method on the
+    instance of \program{Die}.
+
+  \item \program{System.out.println("Die One's Face Value: " + die1);} ---
+    display the value in \program{die1}.
+
+  \item \program{int sum;} --- declare an \program{int} variable to store the
+    sum of the face for multiple \program{Dice} instances
+
+  \item \program{sum = die1.getFaceValue() + die2.getFaceValue() +
+    die3.getFaceValue();} --- \newline assuming three \program{Dice} instances
+    called \program{die1}, \program{die2}, and \program{die3}, sum and save
+    their values.
+
+\end{itemize}
 
 \section*{Checking the Correctness of Your Program and Writing}
 
@@ -257,7 +287,7 @@ the \mainprogramsource{} file has been changed and is ready for transfer to
 GitHub you would first type \gitcommitmainprogram{} in your terminal, followed
 by typing \gitpush{} and checking to see that the transfer to GitHub is
 successful. If you notice that transferring your code to GitHub did not work
-correctly, then please try to determine why, asking a teaching assistant or the
+correctly, then please try to determine why, asking a technical leader or the
 course instructor for help, if necessary.
 
 After the course instructor enables \step{continuous integration} with a system
@@ -283,7 +313,7 @@ Since this is another challenging practical assignment and you are still
 learning how to use the Java classes and objects, don't become frustrated if you
 make a mistake. Instead, use your mistakes as an opportunity for learning both
 about the necessary technology and the background and expertise of the other
-students in the class, the teaching assistants, and the course instructor.
+students in the class, the technical leader, and the course instructor.
 
 \vspace*{-.05in}
 \begin{itemize}
@@ -298,7 +328,7 @@ students in the class, the teaching assistants, and the course instructor.
   this assignment, pay close attention to each of the comments that you write.
   Did you create comments that you will be able to easily understand if you look
   at them several weeks from now? Do all of your comments accurately describe
-  the behavior of your Java source code? If you answered ``no'' to either one of
+  the behavior of your Java source code? If you answered ``no'' to any one of
   these questions, then please take extra time to revise the comments in your
   Java source code.
 
@@ -317,7 +347,7 @@ students in the class, the teaching assistants, and the course instructor.
   what to type or how to handle things. If you are stuck on a part of this
   practical assignment and you could not find any insights in either your
   textbook or online sources, formulate a question to ask your neighbor, a
-  teaching assistant, or a course instructor. Try to strike the right balance
+  technical leader, or a course instructor. Try to strike the right balance
   between asking for help when you cannot solve a problem and working
   independently to find a solution.
 
@@ -334,8 +364,9 @@ assignment, you are not required to complete any technical writing.
 
 \setlength{\itemsep}{0in}
 
-\item A correct version of \mainprogramsource{} that meets all of the established source code requirements and produces
-  the desired text-based output.
+\item A correct version of \mainprogramsource{} that meets all of the
+  established source code requirements and produces the desired text-based
+  output.
 
 \end{enumerate}
 
