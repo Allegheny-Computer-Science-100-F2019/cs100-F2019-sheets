@@ -382,7 +382,7 @@ it. Re-save your program and then build it again by re-running the
 with a technical leader or the instructor.
 
 When all of the errors are eliminated, you can run your program by typing
-\gradlerun{} in the terminal window---this is the ``execute'' step that will run
+\gradlerun{} in the Docker container---this is the ``execute'' step that will run
 your program and produce the designated output. You should see your name,
 today's date, and the textual output. Make sure there are spaces separating
 words in your output (did you forget to put a space inside the quotation marks
@@ -446,13 +446,14 @@ your source code and technical writing to GitHub, as the instructor cannot
 access your deliverables unless you run the \gitpush{} command. Please see the
 instructor if you cannot upload your deliverables.
 
-After the course instructor enables \step{continuous integration} with a system
-called Travis CI, when you use the \gitpush{} command to transfer your source
-code to your GitHub repository, Travis CI will initialize a \step{build} of your
-assignment, checking to see if it meets all of the requirements. If both your
-source code and writing meet all of the established requirements, then you will
-see a green \checkmark{} in the listing of commits in GitHub after awhile. If
-your submission does not meet the requirements, a red \naughtmark{} will appear
+\marginnote{\caution{Review all checks}}[.85in] After the course instructor
+enables \step{continuous integration} with a system called Travis CI, when you
+use the \gitpush{} command to transfer your source code to your GitHub
+repository, Travis CI will initialize a \step{build} of your assignment,
+checking to see if it meets all of the requirements. If both your source code
+and writing meet all of the established requirements, then you will see a green
+\checkmark{} in the listing of commits in GitHub after awhile. If your
+submission does not meet the requirements, a red \naughtmark{} will appear
 instead. The instructor will reduce a student's grade for this assignment if the
 red \naughtmark{} appears on the last commit in GitHub immediately before the
 assignment's due date. Yet, if the green \checkmark{} appears on the last commit
@@ -462,12 +463,22 @@ writing, as further described in the \step{Evaluation} section of this
 assignment sheet. Unless you provide the instructor with documentation of the
 extenuating circumstances that you are facing, no late work will be considered
 towards your grade for this laboratory assignment.
-
+%
 In conclusion, here are some points to remember for creating a program that
 manipulates DNA:
 
 \begin{enumerate}
   \setlength{\itemsep}{2pt}
+
+\item Before you start to implement your Java program, take the time to
+  carefully review the examples in this assignment sheet, making sure that you
+  understand each step and its output.
+
+\item You are likely to encounter challenges as you attempt to define a correct
+  strategy for substituting one character in a DNA string with another. Make
+  sure that you work through several examples and develop a general-purpose
+  implementation strategy before you start coding your solution. You can
+  ask the course instructor or a technical leader to check your solution.
 
 \item You should think carefully about how to combine random numbers with the
   {\tt String} methods.
@@ -476,7 +487,7 @@ manipulates DNA:
   method in one file.
 
 \item If you would like to do so, please consider how to divide the
-  computational work commpleted by your program into separate methods that are
+  computational work completed by your program into separate methods that are
   called by the \program{main} method.
 
 \item See Figure 3.1 for a listing of some common \program{String} methods for
@@ -487,6 +498,9 @@ manipulates DNA:
 
 \item Your program will alternate between creating and displaying textual
   output---this is okay!
+
+\item Since your program employs randomization, every run will not always make
+  the same output.
 
 \item Don't forget to review the assignment sheets from the previous laboratory
   and practical assignments as they contain insights that will support your
