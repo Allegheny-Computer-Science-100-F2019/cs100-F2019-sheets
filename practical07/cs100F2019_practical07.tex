@@ -251,7 +251,25 @@ requires you to understand and edit two different files called
 \mainprogramsource{} and \secondprogramsource{}. This means that you must have
 correct formatting and documentation in both of these files; check the {\tt
 README.md} file for a statement of other checks. You should also be able to draw
-a diagram explaining the relationship between the two source code files.
+a diagram explaining the relationship between the two source code files. To help
+you get started with writing the correct condutional logic, here is a method
+that illustrates how to use modular arithmetic to determine if the provide year
+is one prone to sunspots.
+
+\vspace*{-.05in}
+%
+\begin{verbatim}
+  public boolean isSunspotYear() {
+    boolean isSunspotYear = false;
+    int yearDifference = year - REFERENCE_YEAR;
+    if (yearDifference % 11 == 0) {
+      isSunspotYear = true;
+    }
+    return isSunspotYear;
+  }
+\end{verbatim}
+%
+\vspace*{-.2in}
 
 \begin{figure}[tb]
 \begin{Verbatim}[commandchars=\\\{\}]
@@ -308,36 +326,45 @@ successful. If you notice that transferring your code to GitHub did not work
 correctly, then please try to determine why, asking a teaching assistant or the
 course instructor for help, if necessary.
 
-After the course instructor enables \step{continuous integration} with a system called Travis CI, when you use the
-\gitpush{} command to transfer your source code to your GitHub repository, Travis CI will initialize a \step{build} of
-your assignment, checking to see if it meets all of the requirements. If both your source code and writing meet all of
-the established requirements, then you will see a green \checkmark{} in the listing of commits in GitHub after awhile.
-If your submission does not meet the requirements, a red \naughtmark{} will appear instead. The instructor will reduce a
-student's grade for this assignment if the red \naughtmark{} appears on the last commit in GitHub immediately before the
-assignment's due date. Yet, if the green \checkmark{} appears on the last commit in your GitHub repository, then you
-satisfied all of the main checks. Unless you provide the course instructor with documentation of the extenuating
-circumstances that you are facing, no late work will be considered towards your completion grade for this practical
-assignment. You should aim to finish practical assignments on the day that they are assigned; please see the instructor
-if you do not understand this policy.
+After the course instructor enables \step{continuous integration} with a system
+called Travis CI, when you use the \gitpush{} command to transfer your source
+code to your GitHub repository, Travis CI will initialize a \step{build} of your
+assignment, checking to see if it meets all of the requirements. If both your
+source code and writing meet all of the established requirements, then you will
+see a green \checkmark{} in the listing of commits in GitHub after awhile. If
+your submission does not meet the requirements, a red \naughtmark{} will appear
+instead. The instructor will reduce a student's grade for this assignment if the
+red \naughtmark{} appears on the last commit in GitHub immediately before the
+assignment's due date. Yet, if the green \checkmark{} appears on the last commit
+in your GitHub repository, then you satisfied all of the main checks. Unless you
+provide the course instructor with documentation of the extenuating
+circumstances that you are facing, no late work will be considered towards your
+completion grade for this practical assignment. You should aim to finish
+practical assignments on the day that they are assigned; please see the
+instructor if you do not understand this policy.
 
-Since this is another challenging practical assignment and you are still learning how to use the Java classes and
-objects, don't become frustrated if you make a mistake. Instead, use your mistakes as an opportunity for learning both
-about the necessary technology and the background and expertise of the other students in the class, the teaching
-assistants, and the course instructor.
+Since this is another challenging practical assignment and you are still
+learning how to use the Java classes and objects, don't become frustrated if you
+make a mistake. Instead, use your mistakes as an opportunity for learning both
+about the necessary technology and the background and expertise of the other
+students in the class, the teaching assistants, and the course instructor.
 
-\noindent Students do not need to submit printed source code or technical writing for any assignment in this course.
-Instead, this assignment invites you to submit, using GitHub, the following deliverables. Because this is a practical
+\noindent Students do not need to submit printed source code or technical
+writing for any assignment in this course. Instead, this assignment invites you
+to submit, using GitHub, the following deliverables. Because this is a practical
 assignment, you are not required to complete any technical writing.
 
 \begin{enumerate}
 
 \setlength{\itemsep}{0in}
 
-\item A correct version of \mainprogramsource{} that meets all of the established source code requirements and produces
-  the desired text-based output.
+\item A correct version of \mainprogramsource{} that meets all of the
+  established source code requirements and produces the desired text-based
+  output.
 
-\item A correct version of \secondprogramsource{} that meets all of the established source code requirements and
-  produces the desired text-based output.
+\item A correct version of \secondprogramsource{} that meets all of the
+  established source code requirements and produces the desired text-based
+  output.
 
 \end{enumerate}
 
@@ -350,7 +377,7 @@ However, you will fail the assignment if you do not complete it correctly, as
 evidenced by a red \naughtmark{} in your commit listing, by the set deadline for
 finishing the project.
 
-\section*{Adhering to the Honor Code}
+% \section*{Adhering to the Honor Code}
 
 In adherence to the Honor Code, students should complete this practical
 assignment on an individual basis. While it is appropriate for students in this
@@ -360,6 +387,6 @@ underlying a problem with others and the student who produces assignments that
 are identical to, or merely variations on, someone else's work. Deliverables
 (e.g., the Java source code) that are nearly identical to the work of others
 will be taken as evidence of violating the \mbox{Honor Code}. Please see the
-course instructor if you have questions about this policy.
+course instructor if you have any questions about this policy.
 
 \end{document}
