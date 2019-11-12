@@ -4,8 +4,8 @@
 
 % Edit these commands for each assignment
 
-\newcommand{\assignmentduedate}{November 20}
-\newcommand{\assignmentassignedate}{November 13}
+\newcommand{\assignmentduedate}{November 19}
+\newcommand{\assignmentassignedate}{November 12}
 \newcommand{\assignmentnumber}{Eight}
 
 \newcommand{\labyear}{2019}
@@ -81,7 +81,7 @@ descriptive commit message"}}
 \pagestyle{fancy}
 
 \fancyhf{}
-\rhead{Computer Science 111}
+\rhead{Computer Science 100}
 \lhead{Laboratory Assignment \assignmentnumber{}}
 \rfoot{Page \thepage}
 \lfoot{\duedate}
@@ -94,8 +94,8 @@ descriptive commit message"}}
   \begin{center}
     \begin{center}
       \bf
-      CMPSC 111\\Introduction to Computer Science I\\
-      Fall 2017\\
+      CMPSC 100\\Computational Expression\\
+      Fall 2019\\
       \medskip
     \end{center}
     \bf
@@ -226,7 +226,7 @@ discoveries with a neighbor and a \mbox{teaching assistant}.
 
 \begin{figure}[tb]
 \begin{Verbatim}[commandchars=\\\{\}]
-  Gregory M. Kapfhammer Fri Oct 26 09:49:50 EDT 2019
+  Gregory M. Kapfhammer Tue Nov 12 11:19:20 EST 2019
   Welcome to the Command Line Calculator!
 
   Okay, I read in 5 values. Here they are:
@@ -241,7 +241,7 @@ discoveries with a neighbor and a \mbox{teaching assistant}.
   Great, I found the maximum value: 154
   Okay, I calculated the arithmetic mean as: 62.6
 
-  Thanks for using the Command Line Calculator.
+  Thanks for using the CommandLineCalculator.
 \end{Verbatim}
 \vspace*{-.1in}
 \caption{Sample ``{\tt CommandLineCalculator}'' output featuring numerical values read from a file.}
@@ -280,11 +280,24 @@ refer to previous assignments to learn more about how to read input from a file.
 Then, to perform computations you will invoke all of the methods in the
 \secondprogram{}. Yet, the \secondprogram{} also contains several methods in
 need of a finished implementation. Please refer to the \readme{} file in your
-repository for all of the requirements associated with these files. Finally, you
-should review the partial implementation of the \program{public static double
-calculateArithmeticMean(ArrayList<Integer> numberList)} method as it provides an
-illustrative example of how to iterate through the \program{numberList} in order
-to perform a numerical computation.
+repository for all of the requirements associated with these files. Importantly,
+you should review the partial implementation of the \program{public static
+double calculateArithmeticMean(ArrayList<Integer> numberList)} method as it
+provides an illustrative example of how to iterate through the
+\program{numberList} in order to perform a numerical computation. To further
+help you to understand how to perform both an iteration and the requested
+computation, please also refer to the following source code segment for the
+\program{displayNumberList} method.
+
+\begin{verbatim}
+  public static void displayNumberList(ArrayList<Integer> numberList) {
+    Iterator<Integer> numberListIterator = numberList.iterator();
+    // iterator through the list and display the values
+    while (numberListIterator.hasNext()) {
+      System.out.println(numberListIterator.next());
+    }
+  }
+\end{verbatim}
 
 \section*{Checking the Correctness of Your Program and Writing}
 
@@ -351,9 +364,11 @@ points to remember for creating programs that performs computations:
 \begin{enumerate}
   \setlength{\itemsep}{0pt}
 
-\item The provide source code is incomplete---make sure that you add all of the needed features.
+\item The provide source code is incomplete---make sure that you add all of the
+  needed features.
 
-\item You should draw a technical diagram to show the relationships between the Java classes.
+\item You should draw a technical diagram to show the relationships between the
+  Java classes.
 
 \item Make sure that you review the textbook's diagrams that explain parameter
   passing in Java.
@@ -361,9 +376,18 @@ points to remember for creating programs that performs computations:
 \item Make sure to carefully practice implementing iteration constructs and
   conditional logic.
 
-\item As in past assignments, your program only needs to have one {\tt main} method in one file.
+\item Make sure to know how \program{numberList.iterator()} ``extracts'' an
+  \program{Iterator} from an \program{ArrayList}.
 
-\item Your program will alternate between creating and displaying textual output---this is okay!
+\item As in past assignments, your program only needs to have one {\tt main}
+  method in one file.
+
+\item Your program will alternate between creating and displaying textual
+  output---this is okay!
+
+\item With that said, please carefully notice that the user input and output in
+  this program is primarily in the \program{NumericalCalculator} class. Why is
+  the program designed this way?
 
 \item Your program should support reading in a variable number of data values
   from the provided text file. To ensure its correctness, make sure that you
@@ -378,8 +402,9 @@ points to remember for creating programs that performs computations:
 
 \section*{Summary of the Required Deliverables}
 
-\noindent Students do not need to submit printed source code or technical writing for any assignment in this course.
-Instead, this assignment invites you to submit, using GitHub, the following deliverables.
+\noindent Students do not need to submit printed source code or technical
+writing for any assignment in this course. Instead, this assignment invites you
+to submit, using GitHub, the following deliverables.
 
 \begin{enumerate}
 
@@ -408,14 +433,12 @@ your submitted deliverables. Your grade for the assignment will be a function of
 the whether or not it was submitted in a timely fashion and if your program
 received a green \checkmark{} indicating that it met all of the requirements.
 Other factors will also influence your final grade on the assignment. In
-addition to studying the efficiency and effectiveness of your Java source code,
-the instructor will also evaluate the accuracy of both your technical writing
-and the comments in your source code. If your submission receives a red
-\naughtmark{}, the instructor will reduce your grade for the assignment while
-still considering the regularity with which you committed to your GitHub
-repository and the overall quality of your partially completed work. Please see
-the instructor if you have questions about the evaluation of this laboratory
-assignment.
+addition to studying the efficiency and effectiveness and documentation of your
+Java source code, the instructor will also evaluate the correctness of your
+technical writing. If your submission receives a red \naughtmark{}, the
+instructor will reduce your grade for the assignment. Finally, please remember
+to read your GitHub repository's \program{README.md} file for a description of
+the four grades that you will receive for this laboratory assignment.
 
 It is understood that an important part of the learning process in any course,
 and particularly one in computer science, derives from thoughtful discussions
