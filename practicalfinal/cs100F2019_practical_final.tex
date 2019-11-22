@@ -1,0 +1,217 @@
+\documentclass[11pt]{article}
+
+% NOTE: The "Edit" sections are changed for each assignment
+
+% Edit these commands for each assignment
+
+\newcommand{\assignmentduedate}{December 13}
+\newcommand{\assignmentassignedate}{November 22}
+\newcommand{\assignmentnumber}{Final: Open-Source Software}
+
+\newcommand{\labyear}{2019}
+\newcommand{\labday}{Friday}
+\newcommand{\labdueday}{Friday}
+\newcommand{\labduetime}{12:00 midnight}
+\newcommand{\labtime}{9:00 am}
+
+\newcommand{\assigneddate}{Assigned: \labday, \assignmentassignedate, \labyear{} at \labtime{}}
+\newcommand{\duedate}{Due: \labdueday, \assignmentduedate, \labyear{} at \labduetime{}}
+
+% Edit these commands to give the name to the main program
+
+\newcommand{\mainprogram}{\lstinline{DoublyLinkedList}}
+\newcommand{\mainprogramsource}{\lstinline{src/main/java/practicaleight/list/DoublyLinkedList.java}}
+
+% Edit these commands to give the main program's output details
+
+\newcommand{\mainprogramoutput}{four}
+
+% Edit these commands to give the name to the test suite
+
+\newcommand{\testprogram}{\lstinline{TestDoublyLinkedList}}
+\newcommand{\testprogramsource}{\lstinline{src/test/java/practicaleight/TestDoublyLinkedList.java}}
+
+% Edit this commands to describe key deliverables
+
+\newcommand{\reflection}{\lstinline{writing/reflection.md}}
+
+% Commands to describe key development tasks
+
+% --> Running gatorgrader.sh
+\newcommand{\gatorgraderstart}{\command{gradle grade}}
+\newcommand{\gatorgradercheck}{\command{gradle grade}}
+
+% --> Compiling and running and testing program with gradle
+\newcommand{\gradlebuild}{\command{gradle build}}
+\newcommand{\gradletest}{\command{gradle test}}
+\newcommand{\gradlerun}{\command{gradle run}}
+
+% Commands to describe key git tasks
+
+% NOTE: Could be improved, problems due to nesting
+
+\newcommand{\gitcommitfile}[1]{\command{git commit #1}}
+\newcommand{\gitaddfile}[1]{\command{git add #1}}
+
+\newcommand{\gitadd}{\command{git add}}
+\newcommand{\gitcommit}{\command{git commit}}
+\newcommand{\gitpush}{\command{git push}}
+\newcommand{\gitpull}{\command{git pull}}
+
+\newcommand{\gitcommitmainprogram}{\command{git commit src/main/java/practicaleight/list/DoublyLinkedList.java -m "Your
+descriptive commit message"}}
+
+% Use this when displaying a new command
+
+\newcommand{\command}[1]{``\lstinline{#1}''}
+\newcommand{\program}[1]{\lstinline{#1}}
+\newcommand{\url}[1]{\lstinline{#1}}
+\newcommand{\channel}[1]{\lstinline{#1}}
+\newcommand{\option}[1]{``{#1}''}
+\newcommand{\step}[1]{``{#1}''}
+
+\usepackage{pifont}
+\newcommand{\checkmark}{\ding{51}}
+\newcommand{\naughtmark}{\ding{55}}
+
+\usepackage{listings}
+\lstset{
+  basicstyle=\small\ttfamily,
+  columns=flexible,
+  breaklines=true
+}
+
+\usepackage{fancyhdr}
+
+\usepackage[margin=1in]{geometry}
+\usepackage{fancyhdr}
+
+\pagestyle{fancy}
+
+\fancyhf{}
+\rhead{Computer Science 101}
+\lhead{Practical Assignment \assignmentnumber{}}
+\rfoot{Page \thepage}
+\lfoot{\duedate}
+
+\usepackage{titlesec}
+\titlespacing\section{0pt}{6pt plus 4pt minus 2pt}{4pt plus 2pt minus 2pt}
+
+\newcommand{\labtitle}[1]
+{
+  \begin{center}
+    \begin{center}
+      \bf
+      CMPSC 101\\Data Abstraction\\
+      Fall 2019\\
+      \medskip
+    \end{center}
+    \bf
+    #1
+  \end{center}
+}
+
+\begin{document}
+
+\thispagestyle{empty}
+
+\labtitle{Practical \assignmentnumber{} \\ \assigneddate{} \\ \duedate{}}
+
+\vspace*{-.2in}
+
+\section*{Objectives}
+
+To learn more about the world of open-source software and to practice the skill
+of downloading, installing, and using open-source software written in a
+programming language like Java.
+%
+You will learn more about a total of three open-source projects available on
+GitHub and then attempt to download and install one of these projects,
+ultimately reporting on your experience in through technical writing.
+%
+If possible, students should attempt to find GitHub-hosted projects that connect
+to the course themes of algorithms, data structures, and experimental analysis.
+%
+With that said, you are allowed to review any three open-source projects that
+are currently available for download from GitHub.
+%
+Finally, you should try to download, use, and install at least one of the three
+projects. While earning full credit on this assignment does not require you to
+successfully install and use an open-source project, students are encouraged to
+strive towards the completion of this goal.
+%
+In addition to talking with the course instructor, students should refer to the
+documentation in their GitHub repository for more details about the steps that
+they must take to complete this project.
+
+\section*{Accessing the Practical Assignment on GitHub}
+
+To access the practical assignment, you should go into the
+\channel{\#announcements} channel in our Slack team and find the announcement
+that provides a link for it. If you accepted the assignment and correctly
+followed the appropriate startup steps, you should have created a GitHub
+repository with a name like
+``Allegheny-Computer-Science-101-Fall-2019/computer-science-101-fall-2019-practical-final-gkapfham''.
+%
+Before you move to the next step of this assignment, please make sure that you
+read all of the content on the web site for your new GitHub repository, paying
+close attention to the technical details about the commands that you will type
+and the output that your program must produce. Now you are ready to download the
+starting materials to your practical computer. Click the ``Clone or download''
+button and, after ensuring that you have selected ``Clone with SSH'', please
+copy this command to your clipboard. Please note that there is no provided
+source code for this assignment!
+%
+Instead, students are invited to write about three open-source projects
+available on GitHub and to document their experiences with installing one of
+these projects.
+
+\section*{Summary of the Required Deliverables}
+
+\noindent Students do not need to submit printed source code or technical
+writing for any assignment in this course. Instead, this assignment invites you
+to submit, using GitHub, the following deliverables.
+
+\vspace*{-.05in}
+
+\begin{enumerate}
+
+  \setlength{\itemsep}{0in}
+
+\item A document written in Markdown that provides three paragraphs that give an
+  overview of three separate open-source projects available for download from
+  GitHub.
+
+\end{enumerate}
+
+\vspace*{-.1in}
+
+\section*{Evaluation of Your Final Practical Assignment}
+
+Using a report that the instructor shares with you through the commit log in
+GitHub, you will privately received a grade on this assignment and feedback on
+your submitted deliverables. Your grade for the assignment will be a function of
+the whether or not it was submitted in a timely fashion and if your program
+received a green \checkmark{} indicating that it met all of the baseline
+requirements checked by GatorGrader.
+%
+Please remember to read your GitHub repository's \program{README.md} file for a
+description of the completion grade that you will receive for this practical
+assignment.
+%
+You can talk with the instructor if you have questions about the evaluation of
+this practical assignment.
+
+% \section*{Adhering to the Honor Code}
+
+% In adherence to the Honor Code, students should complete this assignment on an
+% individual basis. While it is appropriate for students in this class to have
+% high-level conversations about the assignment, it is necessary to distinguish
+% carefully between the student who discusses the principles underlying a problem
+% with others and the student who produces assignments that are identical to, or
+% merely variations on, someone else's work. Deliverables (e.g., Java source code
+% or Markdown-based technical writing) that are nearly identical to the work of
+% others will be taken as evidence of violating the \mbox{Honor Code}. Please see
+% the course instructor if you have questions about this policy.
+
+\end{document}
